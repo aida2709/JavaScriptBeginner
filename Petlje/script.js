@@ -50,3 +50,78 @@
 //     brojac++;
 // } while (brojac <= 10);
 
+// 5. 
+// a) while petlja
+
+// const n = parseInt(prompt('Koliko brojeva zelite unijeti?'));
+// let broj;
+// let brojac = 1;
+
+// while (brojac <= n) {
+//     broj = parseFloat(prompt('Unesite broj: '));
+//     brojac++;
+// }
+
+// b) do-while petlja
+
+// const n = parseInt(prompt('Koliko brojeva zelite unijeti?'));
+// let broj;
+// let brojac = 1;
+
+// do {
+//     broj = parseFloat(prompt('Unesite broj: '));
+//     brojac++;
+// } while (brojac <= n);
+
+
+// 6. 
+// a) while petlja
+
+// const n = parseInt(prompt('Koliko brojeva zelite unijeti?'));
+// let broj;
+// let brojac = 1;
+// let suma = 0;
+
+// while (brojac <= n) {
+//     broj = parseFloat(prompt('Unesite broj: '));
+//     suma += broj;
+//     brojac++;
+// }
+
+// alert('Suma unesenih brojeva je ' + suma);
+
+// b) do-while petlja
+
+// const n = parseInt(prompt('Koliko brojeva zelite unijeti?'));
+// let broj;
+// let brojac = 1;
+// let suma = 0;
+
+// do {
+//     broj = parseFloat(prompt('Unesite broj: '));
+//     suma += broj;
+//     brojac++;
+// } while (brojac <= n);
+
+// alert('Suma unesenih brojeva je ' + suma);
+
+
+
+// 7.
+// let broj;
+
+// do {
+//     broj = parseFloat(prompt('Unesite broj: '));
+// } while (broj !== 0);
+
+
+// 8.
+// let broj;
+// let suma = 0;
+
+// do {
+//     broj = parseFloat(prompt('Unesite broj: '));
+//     suma += broj;
+// } while (broj !== 0);
+
+// alert('Suma unesenih brojeva je ' + suma);
