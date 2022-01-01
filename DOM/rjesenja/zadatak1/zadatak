@@ -1,0 +1,5 @@
+Slijedece implementirati koristeci JS DOM manipulacije:
+
+- Pokupiti ime i prezime osobe iz forme
+- Iznad forme, napraviti novi p element ciji ce sadrzaj biti jedanak `Dobrodosli {imePrezime}`
+- Promijeniti pozadinu p novokreiranog p elementa tako da bude crvena a tekst da bude bijele boje
