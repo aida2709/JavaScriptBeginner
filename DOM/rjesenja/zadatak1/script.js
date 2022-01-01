@@ -6,4 +6,4 @@ const paragraph = document.createElement('p');
 paragraph.innerText = `Dobrodosli ${fName[0].getAttribute('value')} ${lName[0].getAttribute('value')}`;
 paragraph.className = 'welcome_p';
 
-form.appendChild(paragraph);
+form.prepend(paragraph);
