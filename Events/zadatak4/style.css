@@ -1,0 +1,13 @@
+#counter {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 40%;
+    background-color: rgb(29, 47, 97);
+    color: white;
+}
+
+#reset{
+    padding:10px;
+    font-size: 20px;
+}
