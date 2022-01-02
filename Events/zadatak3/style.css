@@ -1,0 +1,10 @@
+#kvadrat{
+    position: absolute;
+    background-color: red;
+    width: 150px;
+    height: 150px;
+}
+
+#kvadrat:hover {
+    cursor: pointer;
+}
