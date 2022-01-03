@@ -1,0 +1,9 @@
+Implementirati slijedece ponasanje:
+
+- Kada korisnik kuca tekst u inputu id-a `tekst`,
+promijeniti boju teksta u crvenu
+- Kada korisnik zavrsi sa kucanjem (focus out, blur) neka boja teksta bude zuta
+sa zelenom pozadinom
+- Ako je rijec koju je korisnik unio jednaka `JavaScript`,
+ispisati alert `Dobrodosli na JS kurs!`
+- Ako se selektira tekst, boja pozadine treba postati plava
