@@ -48,6 +48,9 @@ const students = [
     }
 ];
 
+/**********************************************
+1. dio START 
+***********************************************/
 let columns = [
     'firstName',
     'lastName',
@@ -58,8 +61,7 @@ let columns = [
 
 const tableBody = document.querySelector('.table tbody');// fetch <tbody></tbody> so we can append rows to it
 
-// iterate through each student so we can generate table rows with student's data
-students.forEach(student => {
+function createNewStudentRow(student) {
     const createdRow = document.createElement('tr');
 
     let cells = columns.map(column => {
@@ -70,19 +72,72 @@ students.forEach(student => {
 
     createdRow.append(...cells);
     tableBody.appendChild(createdRow);
+
+}
+
+// iterate through each student so we can generate table rows with student's data
+students.forEach(student => {
+    createNewStudentRow(student);
 });
+/**********************************************
+1. dio END 
+***********************************************/
 
 
+
+/**********************************************
+2. dio START 
+***********************************************/
 const addStudentButton = document.getElementById('addStudentBtn');
 const addStudentModal = document.getElementById('addModal');
 const closeStudentModalButton = document.getElementById('closeBtn');
 
-addStudentButton.onclick = function () {
+function otvoriModal() {
     addStudentModal.classList.add('show');
     addStudentModal.style.display = 'block';
+}
+
+function zatvoriModal() {
+    addStudentModal.classList.remove('show');
+    addStudentModal.style.display = 'none';
+}
+
+addStudentButton.onclick = function () {
+    otvoriModal();
 };
 
 closeStudentModalButton.onclick = function () {
-    addStudentModal.classList.remove('show');
-    addStudentModal.style.display = 'none';
+    zatvoriModal();
+};
+/**********************************************
+2. dio END 
+***********************************************/
+
+
+
+
+/**********************************************
+3. dio START 
+***********************************************/
+const saveStudentButton = document.getElementById('saveBtn');
+saveStudentButton.onclick = function () {
+    console.log('Saving data');
+    const firstName = document.getElementById('ime').value;
+    const lastName = document.getElementById('prezime').value;
+    const years = document.getElementById('godine').value;
+    const gender = document.getElementById('spol').value;
+    const city = document.getElementById('mjesto').value;
+
+    const newStudent = {
+        firstName,
+        lastName,
+        years,
+        gender,
+        city
+    }
+
+
+    students.push(newStudent);
+    createNewStudentRow(newStudent);
+    zatvoriModal();
 };
