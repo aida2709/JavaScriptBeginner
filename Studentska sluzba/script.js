@@ -120,14 +120,60 @@ closeStudentModalButton.onclick = function () {
 3. dio START 
 ***********************************************/
 const saveStudentButton = document.getElementById('saveBtn');
+
+function checkIsFormValid(data) {
+    const firstNameErr = document.getElementById('imeError');
+    const lastNameErr = document.getElementById('prezimeError');
+    const yearsErr = document.getElementById('godineError');
+    const genderErr = document.getElementById('spolError');
+    const cityErr = document.getElementById('mjestoError');
+    let isValid = true;
+
+    if (!data.firstName.length) {
+        isValid = false;
+        firstNameErr.classList.remove('hide');
+    } else {
+        isValid = false;
+        firstNameErr.classList.add('hide');
+    }
+
+    if (!data.lastName.length) {
+        isValid = false;
+        lastNameErr.classList.remove('hide');
+    } else {
+        lastNameErr.classList.add('hide');
+    }
+
+    if (!data.years.length) {
+        isValid = false;
+        yearsErr.classList.remove('hide');
+    } else {
+        yearsErr.classList.add('hide');
+    }
+
+    if (!data.gender.length) {
+        isValid = false;
+        genderErr.classList.remove('hide');
+    } else {
+        genderErr.classList.add('hide');
+
+    }
+    if (!data.city.length) {
+        isValid = false;
+        cityErr.classList.remove('hide');
+    } else {
+        cityErr.classList.add('hide');
+    }
+
+
+    return isValid;
+}
 saveStudentButton.onclick = function () {
-    console.log('Saving data');
     const firstName = document.getElementById('ime').value;
     const lastName = document.getElementById('prezime').value;
     const years = document.getElementById('godine').value;
     const gender = document.getElementById('spol').value;
     const city = document.getElementById('mjesto').value;
-
     const newStudent = {
         firstName,
         lastName,
@@ -136,6 +182,10 @@ saveStudentButton.onclick = function () {
         city
     }
 
+    if (!checkIsFormValid(newStudent)) {
+        // ako postoje errori na formi, ne dopustiti save
+        return;
+    }
 
     students.push(newStudent);
     createNewStudentRow(newStudent);

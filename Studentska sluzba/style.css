@@ -6,3 +6,11 @@ body{
     float:right;
     cursor: pointer;
 }
+
+.err-text{
+    color: red !important;;
+}
+
+.hide {
+    display: none;
+}
