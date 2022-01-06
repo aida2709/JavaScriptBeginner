@@ -1,0 +1,8 @@
+body{
+    margin: 10px;
+}
+
+.btn-add{
+    float:right;
+    cursor: pointer;
+}

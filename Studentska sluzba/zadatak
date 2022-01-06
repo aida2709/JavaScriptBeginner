@@ -1,0 +1,18 @@
+U ovom zadatku praviti cemo mini aplikaciju za evidenciju studenata i nihovih ocjena.
+
+Nakon sto pokrenete kod, primjetiti cete tabelu i dugme `Dodaj studenta`.
+Implementirati slijedece:
+
+- U script.js cete primjetiti array naziva studenti. Renderati sve elemente iz arraya na listu
+u index.html-u (koristeci DOM JS metode). 
+- Klikom na dugme `Dodaj studenta` treba da se otvori modal za dodavanje osnovih informacija o studentu (ime, prezime,
+godine, spol, mjesto). Modal mozete pronaci u index.html pod id-em `addModal`. Svi podaci su obavezni (required). Implementirati i validaciju na samoj formi. Da bi se modal prikazao potrebno mu je dodati klasu `show` i `display:block`. I obratno da bismo ga sakrili potrebno je klasu `show` ukloniti i setovati `display:none`.
+Nakon sto su podaci uspjesno uneseni i korisnik klikne na `Spremi`, potrebno je novog studenta pohraniti u niz studenata i prikazati ga na listi.
+
+
+=========================================================================================================================
+Za dodatnu vjezbu:
+- Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o studentima kroz local storage, tako da i kada se
+app refresha - da ostanu svi podaci o studentima.
+- Na formi za dodavanje studenata, da mjesto/grad bude dropdown lista (select)
+=========================================================================================================================
