@@ -112,16 +112,24 @@ function createNewStudentRow(student) {
         return cell;
     });
 
-    // EDIT Akcija cell
+    // Akcija cell (Edit + Delete button)
     let cell = document.createElement('td');
-    let button = document.createElement('button');
-    button.innerText = 'Edit';
-    button.onclick = function () {
+    let editButton = document.createElement('button');
+    editButton.innerText = 'Edit';
+    editButton.onclick = function () {
         editStudent(student);
     }
-    cell.appendChild(button);
+    cell.appendChild(editButton);
+
+    let deleteButton = document.createElement('button');
+    deleteButton.innerText = 'Delete';
+    deleteButton.onclick = function () {
+        console.log('delete', student.id);
+    }
+    cell.appendChild(deleteButton);
+
     cells.push(cell);
-    // EDIT Akcija cell END
+    // Akcija cell END
 
     createdRow.append(...cells);
     tableBody.appendChild(createdRow);

@@ -14,6 +14,8 @@ godine, spol, mjesto). Modal mozete pronaci u index.html pod id-em `addModal`.  
 
 4. Implementirati akciju editiranja studenta. Dakle kada se klikne na akciju `Edit`, otvara se modal za edit podataka studenta iz reda gdje je kliknuta akcija `Edit`. Na `Spremi` treba da se podaci u nizu `students` updejtaju, kao i sama tabela.
 
+5. Implementirati akciju brisanja studenta - klikom na akciju `Delete`.
+
 =========================================================================================================================
 Za dodatnu vjezbu:
 - Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o studentima kroz local storage, tako da i kada se
