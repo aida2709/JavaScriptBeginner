@@ -1,0 +1,9 @@
+U ovom zadatku praviti cemo mini TODO organizer aplikaciju. Zadatak aplikacije je da omoguci kreiranje todo taskova na to do listi, te omogucava prebacivanje istih na done listu kako bismo ih oznacili zavrsenim.
+U prilogu imate kako sve treba izgledati na kraju.
+
+
+=========================================================================================================================
+Za dodatnu vjezbu:
+- Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o studentima kroz local storage, tako da i kada se
+app refresha - da ostanu svi podaci o taskovima.
+=========================================================================================================================
