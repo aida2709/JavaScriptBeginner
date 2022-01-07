@@ -10,3 +10,11 @@ body{
 #addTaskBtn {
     margin-bottom: 15px;
 }
+
+.err-text{
+    color: red !important;;
+}
+
+.hide {
+    display: none;
+}

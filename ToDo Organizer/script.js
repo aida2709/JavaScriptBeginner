@@ -93,16 +93,33 @@ function openModal() {
 function closeModal() {
     addTaskModal.classList.remove('show');
     addTaskModal.style.display = 'none';
+    cleanUpForm();
 }
 
-function saveNewTask(task){
+function saveNewTask(task) {
     tasks.push(task);
 
     refreshList();
 }
 
-renderTasks();
+function cleanUpForm() {
+    titleError.classList.add('hide');
 
+    titleInput.value = '';
+    contentInput.value = '';
+}
+
+function checkIsFormValid() {
+    if (!titleInput.value) {
+        titleError.classList.remove('hide');
+        return false;
+    } else {
+        titleError.classList.add('hide');
+        return true;
+    }
+}
+
+renderTasks();
 
 
 addTaskButton.onclick = function () {
@@ -113,14 +130,15 @@ closeModalButton.onclick = function () {
     closeModal();
 }
 
-saveButton.onclick = function(){
-    const newTask = {
+saveButton.onclick = function () {
+    if (!checkIsFormValid()) {
+        return;
+    }
+    saveNewTask({
         id: getRandomId(),
         title: titleInput.value,
         content: contentInput.value,
         finished: false
-    };
-
-    saveNewTask(newTask);
+    });
     closeModal();
 }
