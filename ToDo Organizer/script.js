@@ -23,8 +23,24 @@ const tasks = [
 const todoList = document.getElementById('todoList');
 const doneList = document.getElementById('doneList');
 
+function getRandomId() {
+    return Math.floor(Math.random() * 100);
+}
+
+function refreshList() {
+    todoList.innerHTML = '';
+    doneList.innerHTML = '';
+    renderTasks();
+}
+
 function finishTask(taskId) {
-    console.log('zavrsi', taskId);
+    const foundTaskIndex = tasks.findIndex((obj => obj.id == taskId));
+    if (foundTaskIndex !== -1) {
+        tasks[foundTaskIndex].finished = true;
+        refreshList();
+    } else {
+        console.log(`Task with id ${taskId} not found.`);
+    }
 }
 
 function appendTaskToList(task) {

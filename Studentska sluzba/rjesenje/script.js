@@ -131,7 +131,6 @@ function updateStudent(student) {
         students[foundStudentIndex] = student;
 
         refreshList();
-
     }
 }
 

@@ -11,7 +11,7 @@ Implementirati slijedece:
 
 2. Implementirati prebacivanje todo taska na done:
 - Svaki task u todo listi na sebi treba imati `button` naziva `Zavrsi`
-- Nakon sto korisnik klikne na ovaj button, task automatski treba da se prebaci na done listu.
+- Nakon sto korisnik klikne na ovaj button, task automatski treba da se prebaci na done listu
 - Ne zaboravite promijeniti property taska finished na true
 
 
@@ -19,4 +19,5 @@ Implementirati slijedece:
 Za dodatnu vjezbu:
 - Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o taskovima kroz local storage, tako da i kada se
 app refresha - ostanu svi podaci o taskovima.
+- Prebacivanje taskova sa todo na done i obratno implementirati kao drag&drop funkcionalnost (a ne preko buttona Zavrsi).
 =========================================================================================================================
