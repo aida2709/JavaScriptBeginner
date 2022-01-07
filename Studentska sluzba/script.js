@@ -54,8 +54,8 @@ const students = [
 let columns = [
     'firstName',
     'lastName',
-    'gender',
     'years',
+    'gender',
     'city'
 ];
 
@@ -133,7 +133,6 @@ function checkIsFormValid(data) {
         isValid = false;
         firstNameErr.classList.remove('hide');
     } else {
-        isValid = false;
         firstNameErr.classList.add('hide');
     }
 
@@ -180,7 +179,7 @@ saveStudentButton.onclick = function () {
         years,
         gender,
         city
-    }
+    };
 
     if (!checkIsFormValid(newStudent)) {
         // ako postoje errori na formi, ne dopustiti save
@@ -191,3 +190,6 @@ saveStudentButton.onclick = function () {
     createNewStudentRow(newStudent);
     zatvoriModal();
 };
+/**********************************************
+3. dio END 
+***********************************************/
