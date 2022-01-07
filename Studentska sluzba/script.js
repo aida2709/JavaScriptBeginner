@@ -85,9 +85,9 @@ const saveStudentButton = document.getElementById('saveBtn');
 /***********************************************************************
  * Functions START
 ************************************************************************/
-// Generates 'next' Student's id
+// Generates random id as student ID
 function getStudentID() {
-    return students.length + 1;
+    return Math.floor(Math.random() * 100);
 }
 
 function editStudent(student) {
