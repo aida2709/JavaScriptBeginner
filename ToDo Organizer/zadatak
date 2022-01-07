@@ -28,6 +28,10 @@ Implementirati slijedece:
 - Id taska treba biti generisan random
 - Implementirati validaciju na formi
 
+5. Implementirati opciju brisanja zavrsenih taskova:
+- Svaki task na done listi treba da ima dugme `Obrisi`
+- Nakon sto korisnik odabere ovu opciju, task treba da bude izbrisan iz niza i sa liste
+
 =========================================================================================================================
 Za dodatnu vjezbu:
 - Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o taskovima kroz local storage, tako da i kada se

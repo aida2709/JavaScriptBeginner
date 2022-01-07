@@ -50,6 +50,16 @@ function finishTask(taskId) {
     }
 }
 
+function deleteTask(taskId){
+    const foundTaskIndex = tasks.findIndex((obj => obj.id == taskId));
+    if (foundTaskIndex !== -1) {
+        tasks.splice(foundTaskIndex, 1);
+        refreshList();
+    } else {
+        console.log(`Task with id ${taskId} not found.`);
+    }
+}
+
 function appendTaskToList(task) {
     // check https://getbootstrap.com/docs/5.0/components/card/
     const card = document.createElement('div');
@@ -63,17 +73,27 @@ function appendTaskToList(task) {
     `;
 
     if (task.finished) {
+        const cardBody = card.querySelector('.card-body');
+        const deleteButton = document.createElement('a');
+        deleteButton.innerText = 'Obrisi';
+        deleteButton.setAttribute('href', '#');
+        deleteButton.classList.add('btn', 'btn-danger');
+        deleteButton.onclick = function () {
+            deleteTask(task.id);
+        }
+        cardBody.appendChild(deleteButton);
+
         doneList.appendChild(card);
     } else {
         const cardBody = card.querySelector('.card-body');
-        const zavrsiButton = document.createElement('a');
-        zavrsiButton.innerText = 'Zavrsi';
-        zavrsiButton.setAttribute('href', '#');
-        zavrsiButton.classList.add('btn', 'btn-primary');
-        zavrsiButton.onclick = function () {
+        const finishButton = document.createElement('a');
+        finishButton.innerText = 'Zavrsi';
+        finishButton.setAttribute('href', '#');
+        finishButton.classList.add('btn', 'btn-primary');
+        finishButton.onclick = function () {
             finishTask(task.id);
         }
-        cardBody.appendChild(zavrsiButton);
+        cardBody.appendChild(finishButton);
 
         todoList.appendChild(card);
     }
