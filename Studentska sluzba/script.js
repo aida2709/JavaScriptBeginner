@@ -131,17 +131,17 @@ function createNewStudentRow(student) {
 function updateStudent(student) {
     editStudentId = null;
     const foundStudentIndex = students.findIndex((obj => obj.id == student.id));
-    if(foundStudentIndex !== -1){
+    if (foundStudentIndex !== -1) {
         students[foundStudentIndex] = student;
 
         // Refresh student list:
-        tableBody.innerHTML= ''; // remove old content
+        tableBody.innerHTML = ''; // remove old content
         generateStudentsList(); // render students again
     }
 }
 
 // iterate through each student so we can generate table rows with student's data
-function generateStudentsList(){
+function generateStudentsList() {
     students.forEach(student => {
         createNewStudentRow(student);
     });
@@ -204,6 +204,15 @@ function checkIsFormValid(data) {
     return isValid;
 }
 
+// clean form from previous inputs
+function cleanUpForm() {
+    document.getElementById('ime').value = '';
+    document.getElementById('prezime').value = '';
+    document.getElementById('godine').value = '';
+    document.getElementById('spol').value = '';
+    document.getElementById('mjesto').value = '';
+}
+
 /***********************************************************************
  * Functions END
 ************************************************************************/
@@ -244,14 +253,15 @@ saveStudentButton.onclick = function () {
     }
 
     // ako editStudentId nije popunjen znaci da se radi o novom dodavanju
-    if(!editStudentId){
+    if (!editStudentId) {
         students.push(newStudent);
         createNewStudentRow(newStudent);
     } else {
         updateStudent(newStudent);
     }
-   
+
     closeModal();
+    cleanUpForm();
 };
 
 /***********************************************************************
