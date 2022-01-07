@@ -22,6 +22,10 @@ const tasks = [
 
 const todoList = document.getElementById('todoList');
 const doneList = document.getElementById('doneList');
+const addTaskModal = document.getElementById('addModal');
+const addTaskButton = document.getElementById('addTaskBtn');
+const closeModalButton = document.getElementById('closeBtn');
+
 
 function getRandomId() {
     return Math.floor(Math.random() * 100);
@@ -78,4 +82,24 @@ function renderTasks() {
     });
 }
 
+function openModal() {
+    addTaskModal.classList.add('show');
+    addTaskModal.style.display = 'block';
+}
+
+function closeModal() {
+    addTaskModal.classList.remove('show');
+    addTaskModal.style.display = 'none';
+}
+
 renderTasks();
+
+
+
+addTaskButton.onclick = function () {
+    openModal();
+}
+
+closeModalButton.onclick = function () {
+    closeModal();
+}

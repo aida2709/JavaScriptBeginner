@@ -30,8 +30,43 @@
     <div class="wrapper">
         <div class="container">
             <div class="row">
+                <div class="col-6">
+                    <button type="button" class="btn btn-info" id="addTaskBtn">+</button>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-6" id="todoList"></div>
                 <div class="col-6" id="doneList"></div>
+            </div>
+
+            <div class="modal fade" id="addModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Dodaj task</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">Ime</label>
+                                    <input type="text" class="form-control" id="ime">
+                                    <div id="imeError" class="form-text err-text hide">Ime je obavezno polje.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Prezime</label>
+                                    <input type="text" class="form-control" id="prezime">
+                                    <div id="prezimeError" class="form-text err-text hide">Prezime je obavezno polje.
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                id="closeBtn">Zatvori</button>
+                            <button type="button" class="btn btn-primary" id="saveBtn">Spremi</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

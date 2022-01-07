@@ -14,6 +14,12 @@ Implementirati slijedece:
 - Nakon sto korisnik klikne na ovaj button, task automatski treba da se prebaci na done listu
 - Ne zaboravite promijeniti property taska finished na true
 
+3. Implementirati otvaranja i zatvaranje modala za dodavanje novog taska:
+- U `index.html` primjetiti cete `button` id-a `addTaskBtn`
+- Odabirom ovog button-a, treba da se otvori modal za dodavanje osnovnih podata o tasku
+- Sto se modala tice, u `index.html` primjetiti cete modal sa id-em `addModal`
+- Da bi se modal prikazao potrebno mu je dodati klasu `show` i `display:block`. I obratno da bismo ga sakrili potrebno je klasu `show` ukloniti i postaviti `display:none`.
+- Dakle, u ovom koraku trebate samo implementirati jednostavno otvaranje i zatvaranje modala
 
 =========================================================================================================================
 Za dodatnu vjezbu:
