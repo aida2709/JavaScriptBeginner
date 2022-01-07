@@ -4,9 +4,9 @@ U prilogu imate kako sve treba izgledati na kraju.
 Implementirati slijedece:
 
 1. Ucitati podatke u liste:
-- U script.js cete primjetiti array naziva `tasks`. U `index.html` primjetiti cete dva diva sa id-evima: `todoList` i 
+- U script.js cete primjetiti niz naziva `tasks`. U `index.html` primjetiti cete dva diva sa id-evima: `todoList` i 
 `doneList`. 
-- Iz arraya `tasks` ucitati taskove u odgovarajucu listu. (Taskovi kojima je property `finished` true idu na doneListu, inace idu na todoListu). 
+- Iz niza `tasks` ucitati taskove u odgovarajucu listu. (Taskovi kojima je property `finished` true idu na doneListu, inace idu na todoListu). 
 - Kako item-i trebaju otprilike izgledati mozete vidjeti u prilogu zadatka, ali se ne morate toga pridrzavati.
 
 2. Implementirati prebacivanje todo taska na done:
