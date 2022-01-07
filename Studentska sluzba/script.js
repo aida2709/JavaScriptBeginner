@@ -102,6 +102,12 @@ function editStudent(student) {
     editStudentId = student.id;
 }
 
+function refreshList() {
+    // Refresh student list:
+    tableBody.innerHTML = ''; // remove old content
+    generateStudentsList(); // render students again
+}
+
 // Za proslijedjenog studenta, kreira tr u table
 function createNewStudentRow(student) {
     const createdRow = document.createElement('tr');
@@ -124,7 +130,7 @@ function createNewStudentRow(student) {
     let deleteButton = document.createElement('button');
     deleteButton.innerText = 'Delete';
     deleteButton.onclick = function () {
-        console.log('delete', student.id);
+        deleteStudent(student.id);
     }
     cell.appendChild(deleteButton);
 
@@ -142,9 +148,17 @@ function updateStudent(student) {
     if (foundStudentIndex !== -1) {
         students[foundStudentIndex] = student;
 
-        // Refresh student list:
-        tableBody.innerHTML = ''; // remove old content
-        generateStudentsList(); // render students again
+        refreshList();
+
+    }
+}
+
+function deleteStudent(studentId) {
+    const foundStudentIndex = students.findIndex((obj => obj.id == studentId));
+    if (foundStudentIndex !== -1) {
+        students.splice(foundStudentIndex, 1);
+        refreshList();
+
     }
 }
 
@@ -164,7 +178,6 @@ function closeModal() {
     addStudentModal.classList.remove('show');
     addStudentModal.style.display = 'none';
 }
-
 
 function checkIsFormValid(data) {
     const firstNameErr = document.getElementById('imeError');
