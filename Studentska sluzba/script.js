@@ -122,6 +122,8 @@ function createNewStudentRow(student) {
     let cell = document.createElement('td');
     let editButton = document.createElement('button');
     editButton.innerText = 'Edit';
+    editButton.classList.add('btn', 'btn-warning');
+    editButton.style.marginRight = '10px';
     editButton.onclick = function () {
         editStudent(student);
     }
@@ -129,6 +131,8 @@ function createNewStudentRow(student) {
 
     let deleteButton = document.createElement('button');
     deleteButton.innerText = 'Delete';
+    deleteButton.classList.add('btn', 'btn-danger');
+
     deleteButton.onclick = function () {
         deleteStudent(student.id);
     }
