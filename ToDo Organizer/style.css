@@ -6,3 +6,7 @@ body{
     margin-top:20px;
     margin-bottom: 20px;
 }
+
+#addTaskBtn {
+    margin-bottom: 15px;
+}
