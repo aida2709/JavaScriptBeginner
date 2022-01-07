@@ -1,5 +1,6 @@
 const students = [
     {
+        id: 1,
         firstName: 'Test',
         lastName: 'Test',
         gender: 'male',
@@ -17,6 +18,7 @@ const students = [
         ]
     },
     {
+        id: 2,
         firstName: 'John',
         lastName: 'Doe',
         gender: 'male',
@@ -34,6 +36,7 @@ const students = [
         ]
     },
     {
+        id: 3,
         firstName: 'Niko',
         lastName: 'Nikic',
         gender: 'female',
@@ -48,10 +51,8 @@ const students = [
     }
 ];
 
-/**********************************************
-1. dio START 
-***********************************************/
 let columns = [
+    'id',
     'firstName',
     'lastName',
     'years',
@@ -59,7 +60,25 @@ let columns = [
     'city'
 ];
 
+let editStudentId = null; // Ovo polje ce biti popunjeno samo ako je edit studenta aktivan
+
 const tableBody = document.querySelector('.table tbody');// fetch <tbody></tbody> so we can append rows to it
+
+function getStudentID() {
+    return students.length + 1;
+}
+
+function editStudent(student) {
+    otvoriModal();
+
+    // popuni formu sa podacima studenta kojeg zelimo editirati
+    document.getElementById('ime').value = student.firstName;
+    document.getElementById('prezime').value = student.lastName;
+    document.getElementById('godine').value = student.years;
+    document.getElementById('spol').value = student.gender;
+    document.getElementById('mjesto').value = student.city;
+    editStudentId = student.id;
+}
 
 function createNewStudentRow(student) {
     const createdRow = document.createElement('tr');
@@ -70,24 +89,42 @@ function createNewStudentRow(student) {
         return cell;
     });
 
-    createdRow.append(...cells);
-    tableBody.appendChild(createdRow);
+    // EDIT Akcija cell
+    let cell = document.createElement('td');
+    let button = document.createElement('button');
+    button.innerText = 'Edit';
+    button.onclick = function () {
+        editStudent(student);
+    }
+    cell.appendChild(button);
+    cells.push(cell);
+    // EDIT Akcija cell END
 
+    createdRow.append(...cells);
+
+    tableBody.appendChild(createdRow);
+}
+
+function updateStudent(student) {
+    editStudentId = null;
+    const foundStudentIndex = students.findIndex((obj => obj.id == student.id));
+    if(foundStudentIndex !== -1){
+        students[foundStudentIndex] = student;
+
+        // Refresh student list:
+        tableBody.innerHTML= ''; // remove old content
+        generateStudentsList(); // render students again
+    }
 }
 
 // iterate through each student so we can generate table rows with student's data
-students.forEach(student => {
-    createNewStudentRow(student);
-});
-/**********************************************
-1. dio END 
-***********************************************/
+function generateStudentsList(){
+    students.forEach(student => {
+        createNewStudentRow(student);
+    });
+}
 
-
-
-/**********************************************
-2. dio START 
-***********************************************/
+generateStudentsList();
 const addStudentButton = document.getElementById('addStudentBtn');
 const addStudentModal = document.getElementById('addModal');
 const closeStudentModalButton = document.getElementById('closeBtn');
@@ -109,16 +146,7 @@ addStudentButton.onclick = function () {
 closeStudentModalButton.onclick = function () {
     zatvoriModal();
 };
-/**********************************************
-2. dio END 
-***********************************************/
 
-
-
-
-/**********************************************
-3. dio START 
-***********************************************/
 const saveStudentButton = document.getElementById('saveBtn');
 
 function checkIsFormValid(data) {
@@ -174,6 +202,7 @@ saveStudentButton.onclick = function () {
     const gender = document.getElementById('spol').value;
     const city = document.getElementById('mjesto').value;
     const newStudent = {
+        id: editStudentId || getStudentID(),
         firstName,
         lastName,
         years,
@@ -186,10 +215,13 @@ saveStudentButton.onclick = function () {
         return;
     }
 
-    students.push(newStudent);
-    createNewStudentRow(newStudent);
+    // ako editStudentId nije popunjen znaci da se radi o novom dodavanju
+    if(!editStudentId){
+        students.push(newStudent);
+        createNewStudentRow(newStudent);
+    } else {
+        updateStudent(newStudent);
+    }
+   
     zatvoriModal();
 };
-/**********************************************
-3. dio END 
-***********************************************/
