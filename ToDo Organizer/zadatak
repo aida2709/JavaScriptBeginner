@@ -21,6 +21,13 @@ Implementirati slijedece:
 - Da bi se modal prikazao potrebno mu je dodati klasu `show` i `display:block`. I obratno da bismo ga sakrili potrebno je klasu `show` ukloniti i postaviti `display:none`.
 - Dakle, u ovom koraku trebate samo implementirati jednostavno otvaranje i zatvaranje modala
 
+4. Implementirati dodavanje novog taska:
+- Nakon sto se otvorio modal, omoguciti korisniku da unese podatke o novom tasku
+- Naslov taska je obavezan, dok sadrzaj nije
+- Novokreirani task treba da ima postavljen property `finsihed` na false, te se automatski dodaje u todo listu
+- Id taska treba biti generisan random
+- Implementirati validaciju na formi
+
 =========================================================================================================================
 Za dodatnu vjezbu:
 - Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o taskovima kroz local storage, tako da i kada se

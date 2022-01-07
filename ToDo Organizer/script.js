@@ -25,7 +25,10 @@ const doneList = document.getElementById('doneList');
 const addTaskModal = document.getElementById('addModal');
 const addTaskButton = document.getElementById('addTaskBtn');
 const closeModalButton = document.getElementById('closeBtn');
-
+const titleInput = document.getElementById('title');
+const contentInput = document.getElementById('content');
+const titleError = document.getElementById('titleError');
+const saveButton = document.getElementById('saveBtn');
 
 function getRandomId() {
     return Math.floor(Math.random() * 100);
@@ -92,6 +95,12 @@ function closeModal() {
     addTaskModal.style.display = 'none';
 }
 
+function saveNewTask(task){
+    tasks.push(task);
+
+    refreshList();
+}
+
 renderTasks();
 
 
@@ -101,5 +110,17 @@ addTaskButton.onclick = function () {
 }
 
 closeModalButton.onclick = function () {
+    closeModal();
+}
+
+saveButton.onclick = function(){
+    const newTask = {
+        id: getRandomId(),
+        title: titleInput.value,
+        content: contentInput.value,
+        finished: false
+    };
+
+    saveNewTask(newTask);
     closeModal();
 }
