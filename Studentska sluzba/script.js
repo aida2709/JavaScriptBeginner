@@ -1,3 +1,6 @@
+/***********************************************************************
+ * Objects START
+************************************************************************/
 const students = [
     {
         id: 1,
@@ -61,15 +64,34 @@ let columns = [
 ];
 
 let editStudentId = null; // Ovo polje ce biti popunjeno samo ako je edit studenta aktivan
+/***********************************************************************
+ * Objects END
+************************************************************************/
 
+
+/***********************************************************************
+ * DOM elements START
+************************************************************************/
 const tableBody = document.querySelector('.table tbody');// fetch <tbody></tbody> so we can append rows to it
+const addStudentButton = document.getElementById('addStudentBtn');
+const addStudentModal = document.getElementById('addModal');
+const closeStudentModalButton = document.getElementById('closeBtn');
+const saveStudentButton = document.getElementById('saveBtn');
+/***********************************************************************
+ * DOM elements END
+************************************************************************/
 
+
+/***********************************************************************
+ * Functions START
+************************************************************************/
+// Generates 'next' Student's id
 function getStudentID() {
     return students.length + 1;
 }
 
 function editStudent(student) {
-    otvoriModal();
+    openModal();
 
     // popuni formu sa podacima studenta kojeg zelimo editirati
     document.getElementById('ime').value = student.firstName;
@@ -80,6 +102,7 @@ function editStudent(student) {
     editStudentId = student.id;
 }
 
+// Za proslijedjenog studenta, kreira tr u table
 function createNewStudentRow(student) {
     const createdRow = document.createElement('tr');
 
@@ -101,10 +124,10 @@ function createNewStudentRow(student) {
     // EDIT Akcija cell END
 
     createdRow.append(...cells);
-
     tableBody.appendChild(createdRow);
 }
 
+// Update studentove informacije u arrayu i u tabeli
 function updateStudent(student) {
     editStudentId = null;
     const foundStudentIndex = students.findIndex((obj => obj.id == student.id));
@@ -124,30 +147,16 @@ function generateStudentsList(){
     });
 }
 
-generateStudentsList();
-const addStudentButton = document.getElementById('addStudentBtn');
-const addStudentModal = document.getElementById('addModal');
-const closeStudentModalButton = document.getElementById('closeBtn');
-
-function otvoriModal() {
+function openModal() {
     addStudentModal.classList.add('show');
     addStudentModal.style.display = 'block';
 }
 
-function zatvoriModal() {
+function closeModal() {
     addStudentModal.classList.remove('show');
     addStudentModal.style.display = 'none';
 }
 
-addStudentButton.onclick = function () {
-    otvoriModal();
-};
-
-closeStudentModalButton.onclick = function () {
-    zatvoriModal();
-};
-
-const saveStudentButton = document.getElementById('saveBtn');
 
 function checkIsFormValid(data) {
     const firstNameErr = document.getElementById('imeError');
@@ -192,9 +201,28 @@ function checkIsFormValid(data) {
         cityErr.classList.add('hide');
     }
 
-
     return isValid;
 }
+
+/***********************************************************************
+ * Functions END
+************************************************************************/
+
+
+
+/***********************************************************************
+ * DOM Events START
+************************************************************************/
+generateStudentsList();
+
+addStudentButton.onclick = function () {
+    openModal();
+};
+
+closeStudentModalButton.onclick = function () {
+    closeModal();
+};
+
 saveStudentButton.onclick = function () {
     const firstName = document.getElementById('ime').value;
     const lastName = document.getElementById('prezime').value;
@@ -223,5 +251,9 @@ saveStudentButton.onclick = function () {
         updateStudent(newStudent);
     }
    
-    zatvoriModal();
+    closeModal();
 };
+
+/***********************************************************************
+ * DOM Events END
+************************************************************************/
