@@ -8,17 +8,7 @@ const students = [
         lastName: 'Test',
         gender: 'male',
         years: 22,
-        city: 'Mostar',
-        grades: [
-            {
-                grade: 10,
-                subject: 'Programiranje'
-            },
-            {
-                grade: 7,
-                subject: 'Matematika'
-            }
-        ]
+        city: 'Mostar'
     },
     {
         id: 2,
@@ -26,17 +16,6 @@ const students = [
         lastName: 'Doe',
         gender: 'male',
         years: 20,
-        city: 'Sarajevo',
-        grades: [
-            {
-                grade: 9,
-                subject: 'Programiranje'
-            },
-            {
-                grade: 7,
-                subject: 'Sigurnost'
-            }
-        ]
     },
     {
         id: 3,
@@ -44,13 +23,7 @@ const students = [
         lastName: 'Nikic',
         gender: 'female',
         years: 20,
-        city: 'Mostar',
-        grades: [
-            {
-                grade: 10,
-                subject: 'Programiranje'
-            },
-        ]
+        city: 'Mostar'
     }
 ];
 
