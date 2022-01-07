@@ -1,20 +1,31 @@
-U ovom zadatku praviti cemo mini aplikaciju za evidenciju studenata i nihovih ocjena. Budite slobodni mijenjati i `index.html` i sto god vam treba.
+U ovom zadatku praviti cemo mini aplikaciju za evidenciju studenata. Budite slobodni mijenjati i `index.html` i sta god vam treba.
 U prilogu imate kako sve treba izgledati na kraju.
 
 Nakon sto pokrenete kod, primjetiti cete tabelu i dugme `Dodaj studenta`.
 Implementirati slijedece:
 
-1. U script.js cete primjetiti array naziva students. Ucitati sve elemente iz arraya na listu
-u index.html-u (koristeci DOM JS metode). 
+1. Ucitati podatke o studentima:
+- U script.js cete primjetiti niz naziva `students`
+- Ucitati sve elemente iz ovog niza na listu u index.html-u (koristeci DOM JS metode)
 
-2.  Klikom na dugme `Dodaj studenta` treba da se otvori modal za dodavanje osnovih informacija o studentu (ime, prezime,
-godine, spol, mjesto). Modal mozete pronaci u index.html pod id-em `addModal`. Da bi se modal prikazao potrebno mu je dodati klasu `show` i `display:block`. I obratno da bismo ga sakrili potrebno je klasu `show` ukloniti i setovati `display:none`. Dakle, u ovom koraku trebate implementirati jednostavno otvaranje i zatvaranje modala.
+2. Implementirati otvaranje i zatvaranje modala:
+- Odabirom opcije `Dodaj studenta` treba da se otvori modal
+- Modal mozete pronaci u index.html pod id-em `addModal`
+- Da bi se modal prikazao potrebno mu je dodati klasu `show` i `display:block`. I obratno da bismo ga sakrili potrebno je klasu `show` ukloniti i postaviti `display:none`.
+- Dakle, u ovom koraku trebate samo implementirati jednostavno otvaranje i zatvaranje modala
 
-3. Implementirati dodavanje novog studenta preko forme. Nakon sto se otvorio modal. prikazujemo formu za unos podataka o studentu. Svi podaci su obavezni (required). Implementirati i validaciju na samoj formi. Nakon sto su podaci uspjesno uneseni i korisnik klikne na `Spremi`, potrebno je novog studenta pohraniti u niz studenata i prikazati ga na listi. ID studenta treba da bude generiran dinamicki.
+3. Implementirati dodavanje novog studenta:
+- Nakon sto se otvorio modal, prikazujemo formu za unos podataka o studentu
+- Svi podaci su obavezni (required)
+- Implementirati i validaciju na samoj formi
+- Nakon sto su podaci uspjesno uneseni i korisnik odabere `Spremi`, potrebno je novog studenta pohraniti u niz studenata i prikazati ga na listi
+- ID studenta treba da bude generisan dinamicki
 
-4. Implementirati akciju editiranja studenta. Dakle kada se klikne na akciju `Edit`, otvara se modal za edit podataka studenta iz reda gdje je kliknuta akcija `Edit`. Na `Spremi` treba da se podaci u nizu `students` updejtaju, kao i sama tabela.
+4. Implementirati uredjivanje studenta:
+- Kada se odabere akcija `Edit`, otvara se modal za uredjivanje podataka studenta iz reda gdje je odabrana akcija `Edit`
+- Na `Spremi` treba da se podaci u nizu `students` osvjeze, kao i sama lista (tabela)
 
-5. Implementirati akciju brisanja studenta - klikom na akciju `Delete`.
+5. Implementirati akciju brisanja studenta - odabirom akcije `Delete`.
 
 =========================================================================================================================
 Za dodatnu vjezbu:
