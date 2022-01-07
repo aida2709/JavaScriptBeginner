@@ -77,6 +77,11 @@ const addStudentButton = document.getElementById('addStudentBtn');
 const addStudentModal = document.getElementById('addModal');
 const closeStudentModalButton = document.getElementById('closeBtn');
 const saveStudentButton = document.getElementById('saveBtn');
+const firstNameErr = document.getElementById('imeError');
+const lastNameErr = document.getElementById('prezimeError');
+const yearsErr = document.getElementById('godineError');
+const genderErr = document.getElementById('spolError');
+const cityErr = document.getElementById('mjestoError');
 /***********************************************************************
  * DOM elements END
 ************************************************************************/
@@ -179,16 +184,12 @@ function openModal() {
 }
 
 function closeModal() {
+    cleanUpForm();
     addStudentModal.classList.remove('show');
     addStudentModal.style.display = 'none';
 }
 
 function checkIsFormValid(data) {
-    const firstNameErr = document.getElementById('imeError');
-    const lastNameErr = document.getElementById('prezimeError');
-    const yearsErr = document.getElementById('godineError');
-    const genderErr = document.getElementById('spolError');
-    const cityErr = document.getElementById('mjestoError');
     let isValid = true;
 
     if (!data.firstName.length) {
@@ -236,6 +237,13 @@ function cleanUpForm() {
     document.getElementById('godine').value = '';
     document.getElementById('spol').value = '';
     document.getElementById('mjesto').value = '';
+
+    firstNameErr.classList.add('hide');
+    lastNameErr.classList.add('hide');
+    yearsErr.classList.add('hide');
+    genderErr.classList.add('hide');
+    cityErr.classList.add('hide');
+
 }
 
 /***********************************************************************
@@ -286,7 +294,6 @@ saveStudentButton.onclick = function () {
     }
 
     closeModal();
-    cleanUpForm();
 };
 
 /***********************************************************************
