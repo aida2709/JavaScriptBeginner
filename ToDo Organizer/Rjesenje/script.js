@@ -19,7 +19,9 @@ const tasks = [
     },
 ];
 
-
+/*****************************************************
+ * Elements START
+ *****************************************************/
 const todoList = document.getElementById('todoList');
 const doneList = document.getElementById('doneList');
 const addTaskModal = document.getElementById('addModal');
@@ -29,35 +31,16 @@ const titleInput = document.getElementById('title');
 const contentInput = document.getElementById('content');
 const titleError = document.getElementById('titleError');
 const saveButton = document.getElementById('saveBtn');
+/*****************************************************
+ * Elements END
+ *****************************************************/
 
+
+/*****************************************************
+ * Functions START
+ *****************************************************/
 function getRandomId() {
     return Math.floor(Math.random() * 100);
-}
-
-function refreshList() {
-    todoList.innerHTML = '';
-    doneList.innerHTML = '';
-    renderTasks();
-}
-
-function finishTask(taskId) {
-    const foundTaskIndex = tasks.findIndex((obj => obj.id == taskId));
-    if (foundTaskIndex !== -1) {
-        tasks[foundTaskIndex].finished = true;
-        refreshList();
-    } else {
-        console.log(`Task with id ${taskId} not found.`);
-    }
-}
-
-function deleteTask(taskId){
-    const foundTaskIndex = tasks.findIndex((obj => obj.id == taskId));
-    if (foundTaskIndex !== -1) {
-        tasks.splice(foundTaskIndex, 1);
-        refreshList();
-    } else {
-        console.log(`Task with id ${taskId} not found.`);
-    }
 }
 
 function appendTaskToList(task) {
@@ -105,6 +88,33 @@ function renderTasks() {
     });
 }
 
+function refreshList() {
+    todoList.innerHTML = '';
+    doneList.innerHTML = '';
+    renderTasks();
+}
+
+function finishTask(taskId) {
+    const foundTaskIndex = tasks.findIndex((obj => obj.id == taskId));
+    if (foundTaskIndex !== -1) {
+        tasks[foundTaskIndex].finished = true;
+        refreshList();
+    } else {
+        console.log(`Task with id ${taskId} not found.`);
+    }
+}
+
+function deleteTask(taskId){
+    const foundTaskIndex = tasks.findIndex((obj => obj.id == taskId));
+    if (foundTaskIndex !== -1) {
+        tasks.splice(foundTaskIndex, 1);
+        refreshList();
+    } else {
+        console.log(`Task with id ${taskId} not found.`);
+    }
+}
+
+
 function openModal() {
     addTaskModal.classList.add('show');
     addTaskModal.style.display = 'block';
@@ -118,7 +128,6 @@ function closeModal() {
 
 function saveNewTask(task) {
     tasks.push(task);
-
     refreshList();
 }
 
@@ -138,10 +147,15 @@ function checkIsFormValid() {
         return true;
     }
 }
+/*****************************************************
+ * Functions END
+ *****************************************************/
 
-renderTasks();
 
 
+/*****************************************************
+ * DOM Events START
+ *****************************************************/
 addTaskButton.onclick = function () {
     openModal();
 }
@@ -162,3 +176,8 @@ saveButton.onclick = function () {
     });
     closeModal();
 }
+/*****************************************************
+ * DOM Events END
+ *****************************************************/
+
+renderTasks();
