@@ -1,20 +1,20 @@
 const tasks = [
     {
         id: 1,
-        title: 'Test',
-        content: 'Test',
+        title: 'Do groceries',
+        content: 'Healthy food only',
         finished: false
     },
     {
         id: 2,
-        title: 'Test2',
-        content: 'Test2',
+        title: 'Read a book',
+        content: 'Finish reading The Book Thief book',
         finished: true
     },
     {
         id: 3,
-        title: 'Test3',
-        content: 'Test3',
+        title: 'Create tests for course',
+        content: 'Create tests for Programming course (make sure to upload it to mega)',
         finished: false
     },
 ];
@@ -75,7 +75,7 @@ function appendTaskToList(task) {
     if (task.finished) {
         const cardBody = card.querySelector('.card-body');
         const deleteButton = document.createElement('a');
-        deleteButton.innerText = 'Obrisi';
+        deleteButton.innerText = 'Delete';
         deleteButton.setAttribute('href', '#');
         deleteButton.classList.add('btn', 'btn-danger');
         deleteButton.onclick = function () {
@@ -87,7 +87,7 @@ function appendTaskToList(task) {
     } else {
         const cardBody = card.querySelector('.card-body');
         const finishButton = document.createElement('a');
-        finishButton.innerText = 'Zavrsi';
+        finishButton.innerText = 'Finish';
         finishButton.setAttribute('href', '#');
         finishButton.classList.add('btn', 'btn-primary');
         finishButton.onclick = function () {
