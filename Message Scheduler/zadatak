@@ -24,6 +24,7 @@ Implementirati slijedece:
 - Sva su polja obavezna osim `imageUrl` polja
 - Klikom na dugme `Save` treba da se spremi scheduled message u niz i da se lista osvjezi
 - Id poruke treba biti random generiran
+- Voditi racuna da hours, minutes and seconds have to be a number
 - Implementirati validaciju na formi
 
 
