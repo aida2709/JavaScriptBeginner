@@ -1,0 +1,16 @@
+U ovom zadatku praviti cemo Book Finder aplikaciju. Aplikacija ima za cilj pretragu i prikaz razlicitih knjiga.
+
+U prilogu imate kako sve treba izgledati na kraju.
+
+Implementirati slijedece:
+
+1. Ucitati detalje o porukama (u nastavku: scheduled messages) u tabelu:
+- U `script.js` primjetiti cete niz `scheduledMessages`.Svaki clan niza predstavlja poruku koju treba odgoditi (schedule) i prikazati u tacno odredjeno vrijeme
+- U `index.html` primjetiti cete tabelu. Sve poruke iz niza ucitati u tabelu sa odgovarajucim podacima.
+- Uz svaku poruku, u redu `Action` prikazati dva buttona: `Start` i `Delete`
+
+=========================================================================================================================
+Za dodatnu vjezbu:
+- Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o knjigama kroz local storage, tako da i kada se app refresha - ostanu svi podaci.
+- Implementirati dodavanje i edit knjiga
+=========================================================================================================================
