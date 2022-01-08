@@ -9,7 +9,7 @@ const scheduledMessages = [
         }
     },
     {
-        id: 1,
+        id: 2,
         message: 'Happy New Year!',
         time: {
             hours: '00',
