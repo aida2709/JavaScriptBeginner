@@ -8,6 +8,13 @@ Implementirati slijedece:
 - U `script.js` primjetiti cete niz `books`.Svaki clan niza predstavlja odredjenu knjigu
 - U `index.html` primjetiti cete tabelu. Sve knjige iz niza ucitati u tabelu sa odgovarajucim podacima.
 
+2. Pretraga po naslovu knjige
+- U `index.html` primjetiti cete input sa id-em `search`
+- Promjenom ovog polja treba se filtrira lista knjiga po naslovu knjige
+- Pri tome podrzati da ako sve bude uneseno malim ili velikim slovima, pretraga idalje radi
+- Takodjer naslov se ne mora automatski poklapaju. Npr ako korisnik unese rijec `harry` treba da se prikazu sve knjige koje posjeduju tu rijec u svom naslovu.
+- Ako korisnik nista ne unese u ovo polje, treba da se prikazu sve knjige
+
 =========================================================================================================================
 Za dodatnu vjezbu:
 - Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o knjigama kroz local storage, tako da i kada se app refresha - ostanu svi podaci.

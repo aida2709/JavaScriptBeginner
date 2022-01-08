@@ -1,4 +1,4 @@
-const books = [
+let books = [
     {
         id: 1,
         title: 'The Book Thief',
@@ -61,7 +61,7 @@ const books = [
     },
     {
         id: 13,
-        title: 'Harry Potter and the Prisoner of Azkaban',
+        title: 'Harry Potter and the Deathly Hallows',
         author: 'J. K. Rowling'
     },
     {
@@ -77,16 +77,12 @@ const books = [
 ];
 
 const columns = ['id', 'title', 'author'];
+let copyOfBooks = books;
 
 
 const tableBody = document.querySelector('.table tbody');// fetch <tbody></tbody> so we can append rows to it
+const searchInput = document.getElementById('search');
 
-
-function refreshList() {
-    // Refresh list:
-    tableBody.innerHTML = ''; // remove old content
-    generateList(); // re-render list
-}
 
 function createNewTableRow(book) {
     const createdRow = document.createElement('tr');
@@ -105,6 +101,27 @@ function generateList() {
     books.forEach(book => {
         createNewTableRow(book);
     });
+}
+
+
+function refreshList() {
+    tableBody.innerHTML = ''; // remove old content
+    generateList(); // re-render list
+}
+
+function filterBooksByTitle(searchTitle) {
+    if (!searchTitle || !searchTitle.length) {
+        books = copyOfBooks;
+    } else {
+        books = copyOfBooks.filter(book => book.title.toLowerCase().includes(searchTitle.toLowerCase()));
+    }
+
+    refreshList();
+}
+
+
+searchInput.oninput = function () {
+    filterBooksByTitle(searchInput.value);
 }
 
 generateList();
