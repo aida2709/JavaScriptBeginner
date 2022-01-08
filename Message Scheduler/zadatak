@@ -21,7 +21,7 @@ Implementirati slijedece:
 
 3. Implementirati dodavanje nove scheduled mesage u listu:
 - Kada se modal otvorio, omoguciti korisniku da unosi podatke u formu
-- Sva su polja obavezna osim `imageUrl` polja
+- Sva su polja obavezna
 - Klikom na dugme `Save` treba da se spremi scheduled message u niz i da se lista osvjezi
 - Id poruke treba biti random generiran
 - Voditi racuna da hours, minutes and seconds have to be a number
@@ -30,6 +30,10 @@ Implementirati slijedece:
 4. Implementirati brisanje poruke:
 - Odabirom opcije `Delete` treba da se obrise poruka u odgovarajucem redu
 
+5. Implementirati `Start` opciju:
+- Odabirom opcije `Start` treba da se pokrene timer countdown za tu poruku
+- Nakon x sati, x minuta i x sekundi treba da se na ekranu u vidu alerta prikaze message za odabranu poruku (pogledati setTimeout JS metodu)
+- Nakon sto se poruka prikaze, istu je potrebni izbrisati
 
 =========================================================================================================================
 Za dodatnu vjezbu:

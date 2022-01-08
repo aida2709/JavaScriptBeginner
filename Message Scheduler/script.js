@@ -2,17 +2,15 @@ const scheduledMessages = [
     {
         id: 1,
         message: 'Kraj casa!',
-        imageUrl: null,
         time: {
             hours: '00',
-            minutes: '10',
-            seconds: '00'
+            minutes: '00',
+            seconds: '05'
         }
     },
     {
         id: 1,
         message: 'Happy New Year!',
-        imageUrl: 'https://www.homemade-gifts-made-easy.com/image-files/happy-new-year-images-2022-glitter-sparkles-1080x1080.png.pagespeed.ce.2QSJltCIj6.png',
         time: {
             hours: '00',
             minutes: '10',
@@ -29,7 +27,6 @@ const addScheduledMessageBtn = document.getElementById('addScheduledMessageBtn')
 const closeBtn = document.getElementById('closeBtn');
 const saveBtn = document.getElementById('saveBtn');
 const messageInput = document.getElementById('message');
-const imageUrlInput = document.getElementById('imageUrl');
 const hoursInput = document.getElementById('hours');
 const minutesInput = document.getElementById('minutes');
 const secondslInput = document.getElementById('seconds');
@@ -67,7 +64,7 @@ function createNewTableRow(message) {
     startButton.classList.add('btn', 'btn-success');
 
     startButton.onclick = function () {
-        startSceduler(message);
+        startScheduler(message);
     }
     cell.appendChild(startButton);
 
@@ -97,7 +94,6 @@ function generateList() {
 function cleanUpForm() {
     hideAllErros();
     messageInput.value = '';
-    imageUrlInput.value = '';
     hoursInput.value = '';
     minutesInput.value = '';
     secondslInput.value = '';
@@ -176,7 +172,6 @@ saveBtn.onclick = function () {
     const newSchedulesMsg = {
         id: getRandomId(),
         message: messageInput.value,
-        imageUrl: imageUrlInput.value,
         time: {
             hours: formatTime(hoursInput.value),
             minutes: formatTime(minutesInput.value),
@@ -187,6 +182,18 @@ saveBtn.onclick = function () {
     scheduledMessages.push(newSchedulesMsg);
     refreshList();
     closeModal();
+}
+
+function convertTimeToMiliseconds(hours, mins, seconds) {
+    return ((parseInt(hours) * 60 * 60 + parseInt(mins) * 60 + parseInt(seconds)) * 1000);
+}
+
+function startScheduler(message) {
+    const miliseconds = convertTimeToMiliseconds(message.time.hours, message.time.minutes, message.time.seconds);
+    setTimeout(function () {
+        alert(message.message);
+        deleteMessage(message.id);
+    }, miliseconds);
 }
 
 generateList();
