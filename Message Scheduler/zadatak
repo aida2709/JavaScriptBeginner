@@ -27,6 +27,9 @@ Implementirati slijedece:
 - Voditi racuna da hours, minutes and seconds have to be a number
 - Implementirati validaciju na formi
 
+4. Implementirati brisanje poruke:
+- Odabirom opcije `Delete` treba da se obrise poruka u odgovarajucem redu
+
 
 =========================================================================================================================
 Za dodatnu vjezbu:

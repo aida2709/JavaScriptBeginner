@@ -142,6 +142,14 @@ function formatTime(number) { // adds zero as prefix (for 6 we got 06)
     return number;
 }
 
+function deleteMessage(messageId) {
+    const foundIndex = scheduledMessages.findIndex((obj => obj.id == messageId));
+    if (foundIndex !== -1) {
+        scheduledMessages.splice(foundIndex, 1);
+        refreshList();
+    }
+}
+
 addScheduledMessageBtn.onclick = function () {
     openModal();
 }
