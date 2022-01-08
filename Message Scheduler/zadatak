@@ -19,6 +19,14 @@ Implementirati slijedece:
 - Da bi se modal prikazao potrebno mu je dodati klasu `show` i `display:block`. I obratno da bismo ga sakrili potrebno je klasu `show` ukloniti i setovati `display:none`.
 - Dakle, u ovom koraku trebate implementirati jednostavno otvaranje i zatvaranje modala.
 
+3. Implementirati dodavanje nove scheduled mesage u listu:
+- Kada se modal otvorio, omoguciti korisniku da unosi podatke u formu
+- Sva su polja obavezna osim `imageUrl` polja
+- Klikom na dugme `Save` treba da se spremi scheduled message u niz i da se lista osvjezi
+- Id poruke treba biti random generiran
+- Implementirati validaciju na formi
+
+
 =========================================================================================================================
 Za dodatnu vjezbu:
 - Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o schedules messages kroz local storage, tako da i kada se app refresha - ostanu svi podaci.

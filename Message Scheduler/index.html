@@ -58,13 +58,26 @@
                         <div class="modal-body">
                             <form>
                                 <div class="mb-3">
-                                    <label class="form-label">Title</label>
-                                    <input type="text" class="form-control" id="title">
-                                    <div id="titleError" class="form-text err-text hide">Title is required</div>
+                                    <label class="form-label">Message</label>
+                                    <input type="text" class="form-control" id="message">
+                                    <div id="messageError" class="form-text err-text hide">Message is required</div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Content</label>
-                                    <textarea type="text" class="form-control" id="content" rows="10"></textarea>
+                                    <label class="form-label">Image Url</label>
+                                    <input type="text" class="form-control" id="imageUrl">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Time</label>
+
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="hours" placeholder="Hours">
+
+                                        <input type="text" class="form-control" id="minutes" placeholder="Minutes">
+
+                                        <input type="text" class="form-control" id="seconds" placeholder="Seconds">
+                                    </div>
+                                    <div id="timeError" class="form-text err-text hide">Time is required</div>
                                 </div>
                             </form>
                         </div>
