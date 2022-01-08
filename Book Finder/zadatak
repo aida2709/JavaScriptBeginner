@@ -26,4 +26,5 @@ Implementirati slijedece:
 Za dodatnu vjezbu:
 - Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o knjigama kroz local storage, tako da i kada se app refresha - ostanu svi podaci.
 - Implementirati dodavanje i edit knjiga
+- Implementirati dva filtera da rade u kombinaciji (sve knjige tog i tog autora koje u svom nazivu sadrze to i to)
 =========================================================================================================================
