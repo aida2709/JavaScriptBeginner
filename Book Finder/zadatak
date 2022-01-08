@@ -4,10 +4,9 @@ U prilogu imate kako sve treba izgledati na kraju.
 
 Implementirati slijedece:
 
-1. Ucitati detalje o porukama (u nastavku: scheduled messages) u tabelu:
-- U `script.js` primjetiti cete niz `scheduledMessages`.Svaki clan niza predstavlja poruku koju treba odgoditi (schedule) i prikazati u tacno odredjeno vrijeme
-- U `index.html` primjetiti cete tabelu. Sve poruke iz niza ucitati u tabelu sa odgovarajucim podacima.
-- Uz svaku poruku, u redu `Action` prikazati dva buttona: `Start` i `Delete`
+1. Prikazati sve knjige u tabeli
+- U `script.js` primjetiti cete niz `books`.Svaki clan niza predstavlja odredjenu knjigu
+- U `index.html` primjetiti cete tabelu. Sve knjige iz niza ucitati u tabelu sa odgovarajucim podacima.
 
 =========================================================================================================================
 Za dodatnu vjezbu:

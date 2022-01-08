@@ -29,11 +29,11 @@ const books = [
         title: 'The Stranger',
         author: 'Albert Camus'
     },
-     {
+    {
         id: 7,
         title: 'A Tale of Two Cities',
         author: 'Charles Dickens'
-    }, 
+    },
     {
         id: 8,
         title: 'The Little Prince',
@@ -75,3 +75,36 @@ const books = [
         author: 'Alice Sebold'
     }
 ];
+
+const columns = ['id', 'title', 'author'];
+
+
+const tableBody = document.querySelector('.table tbody');// fetch <tbody></tbody> so we can append rows to it
+
+
+function refreshList() {
+    // Refresh list:
+    tableBody.innerHTML = ''; // remove old content
+    generateList(); // re-render list
+}
+
+function createNewTableRow(book) {
+    const createdRow = document.createElement('tr');
+
+    let cells = columns.map(column => {
+        let cell = document.createElement('td');
+        cell.innerText = book[column];
+        return cell;
+    });
+
+    createdRow.append(...cells);
+    tableBody.appendChild(createdRow);
+}
+
+function generateList() {
+    books.forEach(book => {
+        createNewTableRow(book);
+    });
+}
+
+generateList();
