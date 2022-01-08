@@ -38,4 +38,6 @@ Implementirati slijedece:
 =========================================================================================================================
 Za dodatnu vjezbu:
 - Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o schedules messages kroz local storage, tako da i kada se app refresha - ostanu svi podaci.
+- Implementirati edit svake poruke.
+- Na formi za dodavanje poruke, dodati checkbox `Ponovi` koji omogucava da se poruka iznova ponavlja svako x vremena.
 =========================================================================================================================
