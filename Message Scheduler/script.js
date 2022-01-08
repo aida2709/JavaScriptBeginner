@@ -94,6 +94,15 @@ function generateList() {
     });
 }
 
+function cleanUpForm() {
+    hideAllErros();
+    messageInput.value = '';
+    imageUrlInput.value = '';
+    hoursInput.value = '';
+    minutesInput.value = '';
+    secondslInput.value = '';
+}
+
 function openModal() {
     addModal.classList.add('show');
     addModal.style.display = 'block';
@@ -102,6 +111,7 @@ function openModal() {
 function closeModal() {
     addModal.classList.remove('show');
     addModal.style.display = 'none';
+    cleanUpForm();
 }
 
 function hideAllErros() {
