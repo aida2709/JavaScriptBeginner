@@ -25,11 +25,13 @@ const scheduledMessages = [
 const columns = ['id', 'message', 'time'];
 
 const tableBody = document.querySelector('.table tbody');// fetch <tbody></tbody> so we can append rows to it
+const addScheduledMessageBtn = document.getElementById('addScheduledMessageBtn');
+const closeBtn = document.getElementById('closeBtn');
 
 function refreshList() {
-    // Refresh student list:
+    // Refresh list:
     tableBody.innerHTML = ''; // remove old content
-    generateStudentsList(); // render students again
+    generateList(); // re-render list
 }
 
 function createNewTableRow(message) {
@@ -80,7 +82,24 @@ function generateList() {
     });
 }
 
+function openModal() {
+    addModal.classList.add('show');
+    addModal.style.display = 'block';
+}
 
+function closeModal() {
+    addModal.classList.remove('show');
+    addModal.style.display = 'none';
+}
+
+
+addScheduledMessageBtn.onclick = function () {
+    openModal();
+}
+
+closeBtn.onclick = function () {
+    closeModal();
+}
 
 
 generateList();

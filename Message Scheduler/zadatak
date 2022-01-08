@@ -11,6 +11,14 @@ Implementirati slijedece:
 - U `index.html` primjetiti cete tabelu. Sve poruke iz niza ucitati u tabelu sa odgovarajucim podacima.
 - Uz svaku poruku, u redu `Action` prikazati dva buttona: `Start` i `Delete`
 
+
+2. Implementirati otvaranje i zatvranje modala za dodavanje nove scheduled mesage u listu:
+- U `index.html` primjetiti cete dugme sa id-em `addScheduledMessageBtn`
+- Klikom na ovo dugme, treba da se otvori modal sa id-em `addModal`
+- Klikom na dugme zatvori na `addModal` modalu, modal treba da se zatvori
+- Da bi se modal prikazao potrebno mu je dodati klasu `show` i `display:block`. I obratno da bismo ga sakrili potrebno je klasu `show` ukloniti i setovati `display:none`.
+- Dakle, u ovom koraku trebate implementirati jednostavno otvaranje i zatvaranje modala.
+
 =========================================================================================================================
 Za dodatnu vjezbu:
 - Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o schedules messages kroz local storage, tako da i kada se app refresha - ostanu svi podaci.
