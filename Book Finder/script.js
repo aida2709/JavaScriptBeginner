@@ -82,7 +82,27 @@ let copyOfBooks = books;
 
 const tableBody = document.querySelector('.table tbody');// fetch <tbody></tbody> so we can append rows to it
 const searchInput = document.getElementById('search');
+const authorSelect = document.getElementById('authorSelect');
 
+function removeDuplicatesFromArray(array) {
+    return Array.from(new Set(array));
+}
+
+function renderAuthorsIntoSelect() {
+    let authors = copyOfBooks.map(function (book) {
+        return book.author;
+    });
+    authors = removeDuplicatesFromArray(authors);
+
+
+    authors.forEach(item => {
+        const option = document.createElement('option');
+        option.setAttribute('value', item);
+        option.innerText = item;
+
+        authorSelect.appendChild(option);
+    });
+}
 
 function createNewTableRow(book) {
     const createdRow = document.createElement('tr');
@@ -119,9 +139,26 @@ function filterBooksByTitle(searchTitle) {
     refreshList();
 }
 
+function filterBooksByAuthor(authorName) {
+    if (!authorName || !authorName.length) {
+        books = copyOfBooks;
+    } else {
+        books = copyOfBooks.filter(book => book.author === authorName);
+    }
+
+    refreshList();
+}
+
 
 searchInput.oninput = function () {
     filterBooksByTitle(searchInput.value);
+    authorSelect.value = '';
+}
+
+authorSelect.onchange = function () {
+    filterBooksByAuthor(authorSelect.value);
+    searchInput.value = '';
 }
 
 generateList();
+renderAuthorsIntoSelect();

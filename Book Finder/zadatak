@@ -15,6 +15,13 @@ Implementirati slijedece:
 - Takodjer naslov se ne mora automatski poklapaju. Npr ako korisnik unese rijec `harry` treba da se prikazu sve knjige koje posjeduju tu rijec u svom naslovu.
 - Ako korisnik nista ne unese u ovo polje, treba da se prikazu sve knjige
 
+3. Filtriranje po autoru knjige
+- U `index.html` primjetiti cete select kontrolu sa id-em `authorSelect`
+- Iz niza knjiga pokupiti sve autore i ucitati ih u select listu. Pri tome paziti da se ime jednog autora ne ponavlja dva puta.
+- Nakon sto korisnik odabere nekog autora iz select-a, prikazati samo one knjige ciji je autor jednak odabranom
+- Ako korisnik odabere `All authors` option, treba da se ucitaju sve knjige u listu.
+- Ako korisnik odabere neku od opcija iz selecta, polje sa id-em `search` treba setovati da bude prazno. Takodjer obratno, ako korisnik unese nesto u search polje, selektirana vrijednost treba da bude `All authors`. Dakle jedan filter iskljucuje drugi.
+
 =========================================================================================================================
 Za dodatnu vjezbu:
 - Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o knjigama kroz local storage, tako da i kada se app refresha - ostanu svi podaci.
