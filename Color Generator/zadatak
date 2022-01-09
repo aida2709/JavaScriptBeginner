@@ -7,7 +7,13 @@ Implementirati slijedece:
 
 1. Implementirati setovanje boje po HEX standardu:
 - U `index.html` primjetiti cete input sa id-em `hexColor`, te button sa id-em `setHexBtn`
-- Takodjer tu je i div sa id-em `hexColor`, te button sa id-em `coloredDiv`
+- Takodjer tu je i div sa id-em `coloredDiv`
 - Nakon sto korisnik klikne na Set button, `coloredDiv` div treba da poprimi boju koja je jednaka unesenoj
 - Implementirati i validaciju - kada se klikne na dugme `Set`, ukoliko boja nije unesena u input, korsiniku treba da se prikaze error pruka (#hexColorError)
 - Osigurati da program radi i ako korisnik unese # na pocetku i ako ne unese
+
+
+1. Implementirati setovanje boje po RGB standardu:
+- U `index.html` primjetiti cete inpute sa id-evima `red`, `blue`, `green`, te button sa id-em `setRGBBtn`
+- Nakon sto korisnik klikne na Set button, `coloredDiv` div treba da poprimi boju koja je jednaka unesenoj u red, green i blue inputima
+- Implementirati i validaciju - kada se klikne na dugme `Set`, ukoliko neko od RGB polja nije uneseno, korisniku treba da se prikaze error pruka (#rgbError)
