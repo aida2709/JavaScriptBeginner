@@ -7,6 +7,8 @@ const greenInput = document.getElementById('green');
 const blueInput = document.getElementById('blue');
 const setRGBBtn = document.getElementById('setRGBBtn');
 const rgbError = document.getElementById('rgbError');
+const randomGenerateColorCheckbox = document.getElementById('randomGenerateColor');
+let myInterval;
 
 
 function colorizeDivHex(color) {
@@ -15,6 +17,7 @@ function colorizeDivHex(color) {
 
 function colorizeDivRgb(color) {
     coloredDiv.style.backgroundColor = `rgb(${color.red},${color.green},${color.blue})`;
+    console.log('color', color);
 
 }
 
@@ -22,6 +25,22 @@ function checkAreColorsValid(red, blue, green) {
     return red && !isNaN(red)
         && blue && !isNaN(blue)
         && green && !isNaN(green);
+}
+
+function generateRandomColor() {
+    return Math.floor(Math.random() * 1000);
+}
+
+function randomlyChangeColor() {
+    const color = {
+        red: generateRandomColor(),
+        blue: generateRandomColor(),
+        green: generateRandomColor()
+    };
+    colorizeDivRgb(color);
+    redInput.value = color.red;
+    greenInput.value = color.green;
+    blueInput.value = color.blue;
 }
 
 setHexBtn.onclick = function () {
@@ -48,5 +67,12 @@ setRGBBtn.onclick = function () {
         rgbError.classList.add('hide');
         colorizeDivRgb({ red, blue, green });
     }
+}
 
+randomGenerateColorCheckbox.onchange = function () {
+    if (randomGenerateColorCheckbox.checked) {
+        myInterval = setInterval(randomlyChangeColor, 3000);
+    } else {
+        clearInterval(myInterval);
+    }
 }
