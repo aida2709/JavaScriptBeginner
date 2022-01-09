@@ -17,8 +17,6 @@ function colorizeDivHex(color) {
 
 function colorizeDivRgb(color) {
     coloredDiv.style.backgroundColor = `rgb(${color.red},${color.green},${color.blue})`;
-    console.log('color', color);
-
 }
 
 function checkAreColorsValid(red, blue, green) {
@@ -28,7 +26,7 @@ function checkAreColorsValid(red, blue, green) {
 }
 
 function generateRandomColor() {
-    return Math.floor(Math.random() * 1000);
+    return Math.floor(Math.random() * (255 + 1));
 }
 
 function randomlyChangeColor() {
