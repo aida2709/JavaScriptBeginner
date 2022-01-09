@@ -43,6 +43,7 @@ function randomlyChangeColor() {
     blueInput.value = color.blue;
 }
 
+
 setHexBtn.onclick = function () {
     let color = hexColorInput.value;
 
@@ -53,8 +54,6 @@ setHexBtn.onclick = function () {
         colorizeDivHex(color);
     }
 }
-
-
 
 setRGBBtn.onclick = function () {
     let red = redInput.value;
