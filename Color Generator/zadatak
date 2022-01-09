@@ -1,0 +1,13 @@
+U ovom zadatku praviti cemo Color Generator aplikaciju. Aplikacija ima za cilj pregled odredje boje, bilo u RGB ili HEX formatu.
+Dakle korisnik unese odredjenu boju u formatu u kojem zeli, te nakon sto klikne Set, prikaze se div sa tacno takvom bojom.
+
+U prilogu imate kako sve treba izgledati na kraju.
+
+Implementirati slijedece:
+
+1. Implementirati setovanje boje po HEX standardu:
+- U `index.html` primjetiti cete input sa id-em `hexColor`, te button sa id-em `setHexBtn`
+- Takodjer tu je i div sa id-em `hexColor`, te button sa id-em `coloredDiv`
+- Nakon sto korisnik klikne na Set button, `coloredDiv` div treba da poprimi boju koja je jednaka unesenoj
+- Implementirati i validaciju - kada se klikne na dugme `Set`, ukoliko boja nije unesena u input, korsiniku treba da se prikaze error pruka (#hexColorError)
+- Osigurati da program radi i ako korisnik unese # na pocetku i ako ne unese
