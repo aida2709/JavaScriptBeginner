@@ -1,0 +1,8 @@
+U ovom zadatku praviti cemo jednostavnu Currency Converter aplikaciju. Aplikacija ima za cilj konverziju iznosa
+iz jedne valute u drugu. Jedine dvije value koje cemo za sada iplementirati su BAM i EUR.
+
+U prilogu imate kako sve treba izgledati na kraju.
+
+Implementirati slijedece:
+
+1. 
