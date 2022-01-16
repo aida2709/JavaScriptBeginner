@@ -13,3 +13,7 @@ Implementirati slijedece:
 - Ukoliko korisnicki podaci nisu ispravni, prikazati korisniku alert sa errorom `Podaci nisu ispravni`
 - Ukoliko su podaci ispravni, sakriti div sa id-em `login` a prikazati div sa id-em `home`. Da biste sakrili div, mozete
 iskoristi klasu hide, a da biste prikazali samo uklonite klasu hide.
+
+2. Opcija Prekid
+- Nakon sto ste prikazati div sa id-em `home`, primjetiti cete tri buttona (Isplata, Stanje i Prekid)
+- Klikom na dugme Prekid treba da se izadje sa home page-a, tj da se sakrije div sa id-em `home`, a prikaze div id-a `login`

@@ -19,6 +19,7 @@ const users = [
     }
 ];
 
+let currentUser = null;
 const loginDiv = document.getElementById('login');
 const homeDiv = document.getElementById('home');
 const cardNumberInput = document.getElementById('cardNumber');
@@ -26,6 +27,7 @@ const pinInput = document.getElementById('pin');
 const loginBtn = document.getElementById('loginBtn');
 const cardNumberError = document.getElementById('cardNumberError');
 const pinError = document.getElementById('pinError');
+const cancelBtn = document.getElementById('cancelBtn');
 
 function hideErrors() {
     cardNumberError.classList.add('hide'); pinError
@@ -54,6 +56,16 @@ function showHomePage() {
     homeDiv.classList.remove('hide');
 }
 
+function showLoginPage() {
+    loginDiv.classList.remove('hide');
+    homeDiv.classList.add('hide');
+}
+
+function cleanUpForm() {
+    cardNumberInput.value = '';
+    pinInput.value = '';
+}
+
 loginBtn.onclick = function () {
     if (!checkIsFormValid()) {
         return;
@@ -65,9 +77,15 @@ loginBtn.onclick = function () {
     const foundUser = users.find((user) => user.cardNumber === cardNum && user.PIN === pin);
 
     if (foundUser) {
+        currentUser = foundUser;
+        cleanUpForm();
         showHomePage();
     } else {
         alert('Korisnicki podaci nisu ispravni!');
     }
 }
 
+cancelBtn.onclick = function () {
+    currentUser = null;
+    showLoginPage();
+}
