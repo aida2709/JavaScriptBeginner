@@ -1,0 +1,25 @@
+body{
+    margin: 10px;
+}
+
+.err-text{
+    color: red !important;;
+}
+
+.hide {
+    display: none;
+}
+
+.wrapper {
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.center {
+    width: 500px!important;
+   margin-left: 30%;
+}
+
+.full-width{
+    width: 500px;
+}

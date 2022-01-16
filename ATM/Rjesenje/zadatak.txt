@@ -1,0 +1,31 @@
+U ovom zadatku praviti cemo aplikaciju koja simulira rad bankomata.
+U prilogu imate kako sve treba izgledati na kraju.
+
+Implementirati slijedece:
+
+1. Logiranje
+- U `index.html` primjetiti cete div sa id-em `login`
+- Korisnik prvo treba da unese broj kartice i PIN
+- U `script.js` primjetiti cete niz naziva `users` koji predstavlja korisnike banke
+- Nakon sto korisnik unese broj kartice i PIN, provjeriti da li su uneseni podaci validni na osnovu elenata niza `users 
+(Treba provjeriti na osnovu unesenog broja kartice i PINa da li postoji ijedan user sa takvim podacima u nizu)
+- Implementirati validaciju na formi (sva polja su obavezna)
+- Ukoliko korisnicki podaci nisu ispravni, prikazati korisniku alert sa errorom `Podaci nisu ispravni`
+- Ukoliko su podaci ispravni, sakriti div sa id-em `login` a prikazati div sa id-em `home`. Da biste sakrili div, mozete
+iskoristi klasu hide, a da biste prikazali samo uklonite klasu hide.
+
+2. Opcija Prekid
+- Ova opcija treba da "izbaci" korisnika iz bankomata i vrati ga na login
+- Nakon sto ste prikazati div sa id-em `home`, primjetiti cete tri buttona (Isplata, Stanje i Prekid)
+- Klikom na dugme Prekid treba da se izadje sa home page-a, tj da se sakrije div sa id-em `home`, a prikaze div id-a `login`
+
+3. Opcija Stanje
+- Ova opcija treba korisniku da prikaze stanje racuna
+- U `index.html` primjetiti cete div sa id-em `balance`. Kada korisnik odabere opciju `Stanje` pomenuti div treba da se
+prikaze (da mu uklonimo klasu hide) i da u h3 tagu (id `balanceAmount`) prikaze stanje racuna logiranog korisnika.
+
+4. Opcija Isplata
+- Ova opcija korisniku treba da omoguci isplatu novca sa racuna.
+- Odabirom opcije `Isplata` treba da se prikaze div sa id-em `payoutDiv` koji prikazuje formu za unos novca kojeg korisnik
+zeli isplatiti.
+- Napomena: voditi racuna o tome da li korisnik ima dovoljno sredstava na racunu prije nego uradite isplatu.
