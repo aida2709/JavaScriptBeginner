@@ -1,0 +1,13 @@
+U ovom zadatku praviti cemo aplikaciju koja simulira rad bankomata.
+U prilogu imate kako sve treba izgledati na kraju.
+
+Implementirati slijedece:
+
+1. Logiranje
+- U `index.html` primjetiti cete div sa id-em `login`
+- Korisnik prvo treba da unese broj kartice i PIN
+- U `script.js` primjetiti cete niz naziva `users` koji predstavlja korisnike banke
+- Nakon sto korisnik unese broj kartice i PIN, provjeriti da li su uneseni podaci validni na osnovu elenata niza `users` (Treba
+provjeriti na osnovu unesenog broja kartice i PINa da li postoji ijedan user sa takvim podacima u nizu)
+- Implementirati validaciju na formi (sva polja su obavezna)
+- Ukoliko korisnicki podaci nisu ispravni, prikazati korisniku alert sa errorom `Podaci nisu ispravni`
