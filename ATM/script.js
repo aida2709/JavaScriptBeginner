@@ -4,21 +4,21 @@ const users = [
         lastName: 'Nikic',
         cardNumber: '123456',
         PIN: '0000',
-        amount: '25000'
+        amount: 25000
     },
     {
         firstName: 'Test',
         lastName: 'Test',
         cardNumber: '789123',
         PIN: '1111',
-        amount: '10000'
+        amount: 10000
     },
     {
         firstName: 'Miro',
         lastName: 'Miric',
         cardNumber: '654321',
         PIN: '2222',
-        amount: '37000'
+        amount: 37000
     }
 ];
 
@@ -140,13 +140,13 @@ payoutActionBtn.onclick = function () {
     if (!isPayoutFormValid()) {
         return;
     }
-    const amount = amountToPayout.value;
+    const amount = parseFloat(amountToPayout.value);
+
     if (amount <= currentUser.amount) {
-        currentUser.amount -= parseFloat(amount);
+        currentUser.amount -= amount;
         amountToPayout.value = '';
         alert('Novac je uspjesno isplacen!');
     } else {
         alert('Nemate dovoljno sredstava na racunu!');
     }
-
 }
