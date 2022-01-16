@@ -33,13 +33,13 @@
                 <div class="row">
                     <h3>Dobrodosli</h3>
                 </div>
-
                 <div class="row">
                     <form class="center" onsubmit="event.preventDefault();">
                         <div class="mb-3">
                             <label class="form-label">Broj kartice</label>
                             <input type="text" class="form-control" id="cardNumber">
-                            <div id="cardNumberError" class="form-text err-text hide">Broj kartice je obavezno polje.</div>
+                            <div id="cardNumberError" class="form-text err-text hide">Broj kartice je obavezno polje.
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">PIN</label>
@@ -49,6 +49,28 @@
                         </div>
 
                         <button id="loginBtn" class="btn btn-success">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="home" class="hide">
+                <div class="row">
+                    <h3>Odaberite opciju</h3>
+                </div>
+                <div class="row">
+                    <form class="center" onsubmit="event.preventDefault();">
+                        <div class="mb-3">
+                            <button id="payoutBtn" class="btn btn-primary full-width">Isplata</button>
+                        </div>
+
+                        <div class="mb-3">
+                            <button id="balanceBtn" class="btn btn-info full-width">Stanje</button>
+                        </div>
+
+                        <div class="mb-3">
+                            <button id="cancelBtn" class="btn btn-danger full-width">Prekid</button>
+                        </div>
+
                     </form>
                 </div>
             </div>

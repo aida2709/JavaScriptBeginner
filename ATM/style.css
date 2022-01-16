@@ -15,15 +15,12 @@ body{
     margin-bottom: 20px;
 }
 
-#coloredDiv {
-    height: 10rem;
-    width: 10rem;
-    margin: auto;
-    padding: 10px;
-}
-
 .center {
     width: 500px!important;
     position: absolute;
     left: 30%;
+}
+
+.full-width{
+    width: 500px;
 }

@@ -19,6 +19,8 @@ const users = [
     }
 ];
 
+const loginDiv = document.getElementById('login');
+const homeDiv = document.getElementById('home');
 const cardNumberInput = document.getElementById('cardNumber');
 const pinInput = document.getElementById('pin');
 const loginBtn = document.getElementById('loginBtn');
@@ -47,6 +49,11 @@ function checkIsFormValid() {
     return isValid;
 }
 
+function showHomePage() {
+    loginDiv.classList.add('hide');
+    homeDiv.classList.remove('hide');
+}
+
 loginBtn.onclick = function () {
     if (!checkIsFormValid()) {
         return;
@@ -58,7 +65,7 @@ loginBtn.onclick = function () {
     const foundUser = users.find((user) => user.cardNumber === cardNum && user.PIN === pin);
 
     if (foundUser) {
-        console.log('uspjeh');
+        showHomePage();
     } else {
         alert('Korisnicki podaci nisu ispravni!');
     }
