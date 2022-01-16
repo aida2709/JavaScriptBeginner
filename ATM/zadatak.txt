@@ -15,5 +15,11 @@ Implementirati slijedece:
 iskoristi klasu hide, a da biste prikazali samo uklonite klasu hide.
 
 2. Opcija Prekid
+- Ova opcija treba da "izbaci" korisnika iz bankomata i vrati ga na login
 - Nakon sto ste prikazati div sa id-em `home`, primjetiti cete tri buttona (Isplata, Stanje i Prekid)
 - Klikom na dugme Prekid treba da se izadje sa home page-a, tj da se sakrije div sa id-em `home`, a prikaze div id-a `login`
+
+3. Opcija Stanje
+- Ova opcija treba korisniku da prikaze stanje racuna
+- U `index.html` primjetiti cete div sa id-em `balance`. Kada korisnik odabere opciju `Stanje` pomenuti div treba da se
+prikaze (da mu uklonimo klasu hide) i da u h3 tagu (id `balanceAmount`) prikaze stanje racuna logiranog korisnika.
