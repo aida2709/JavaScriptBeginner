@@ -84,6 +84,22 @@
                     <h3 class="center" id="balanceAmount"></h3>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="hide" id="payoutDiv">
+                    <form class="center" onsubmit="event.preventDefault();">
+                        <div class="mb-3">
+                            <label class="form-label">Iznos za isplatu</label>
+                            <input type="text" class="form-control" id="amountToPayout">
+                            <div id="amountToPayoutError" class="form-text err-text hide">Iznos je obavezan</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button id="payoutActionBtn" class="btn btn-danger full-width">Isplati</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 

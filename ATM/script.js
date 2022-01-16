@@ -33,6 +33,10 @@ const pinError = document.getElementById('pinError');
 const cancelBtn = document.getElementById('cancelBtn');
 const balanceBtn = document.getElementById('balanceBtn');
 const balanceDiv = document.getElementById('balance');
+const payoutBtn = document.getElementById('payoutBtn');
+const payoutDiv = document.getElementById('payoutDiv');
+const payoutActionBtn = document.getElementById('payoutActionBtn');
+const amountToPayout = document.getElementById('amountToPayout');
 
 function hideErrors() {
     cardNumberError.classList.add('hide'); pinError
@@ -60,17 +64,41 @@ function showHomePage() {
     loginDiv.classList.add('hide');
     homeDiv.classList.remove('hide');
     balanceDiv.classList.add('hide');
+    payoutDiv.classList.add('hide');
 }
 
 function showLoginPage() {
     loginDiv.classList.remove('hide');
     homeDiv.classList.add('hide');
     balanceDiv.classList.add('hide');
+    payoutDiv.classList.add('hide');
 }
 
 function cleanUpForm() {
     cardNumberInput.value = '';
     pinInput.value = '';
+}
+
+function showPayoutDiv() {
+    balanceDiv.classList.add('hide');
+    payoutDiv.classList.remove('hide');
+}
+
+function showBalanceDiv() {
+    balanceDiv.classList.remove('hide');
+    payoutDiv.classList.add('hide');
+}
+
+function isPayoutFormValid() {
+    const amountToPayoutError = document.getElementById('amountToPayoutError');
+    amountToPayoutError.classList.add('hide');
+
+    if (!amountToPayout.value) {
+        amountToPayoutError.classList.remove('hide');
+        return false;
+    }
+
+    return true;
 }
 
 loginBtn.onclick = function () {
@@ -98,7 +126,27 @@ cancelBtn.onclick = function () {
 }
 
 balanceBtn.onclick = function () {
-    balanceDiv.classList.remove('hide');
+    showBalanceDiv();
     const balanceAmount = document.getElementById('balanceAmount');
     balanceAmount.innerText = `Stanje racuna iznosi ${currentUser.amount} KM`;
+}
+
+payoutBtn.onclick = function () {
+    amountToPayout.value = '';
+    showPayoutDiv();
+}
+
+payoutActionBtn.onclick = function () {
+    if (!isPayoutFormValid()) {
+        return;
+    }
+    const amount = amountToPayout.value;
+    if (amount <= currentUser.amount) {
+        currentUser.amount -= parseFloat(amount);
+        amountToPayout.value = '';
+        alert('Novac je uspjesno isplacen!');
+    } else {
+        alert('Nemate dovoljno sredstava na racunu!');
+    }
+
 }

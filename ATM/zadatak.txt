@@ -23,3 +23,9 @@ iskoristi klasu hide, a da biste prikazali samo uklonite klasu hide.
 - Ova opcija treba korisniku da prikaze stanje racuna
 - U `index.html` primjetiti cete div sa id-em `balance`. Kada korisnik odabere opciju `Stanje` pomenuti div treba da se
 prikaze (da mu uklonimo klasu hide) i da u h3 tagu (id `balanceAmount`) prikaze stanje racuna logiranog korisnika.
+
+4. Opcija Isplata
+- Ova opcija korisniku treba da omoguci isplatu novca sa racuna.
+- Odabirom opcije `Isplata` treba da se prikaze div sa id-em `payoutDiv` koji prikazuje formu za unos novca kojeg korisnik
+zeli isplatiti.
+- Napomena: voditi racuna o tome da li korisnik ima dovoljno sredstava na racunu prije nego uradite isplatu.
