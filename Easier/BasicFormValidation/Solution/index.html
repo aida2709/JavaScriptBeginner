@@ -1,0 +1,78 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Student APP</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <div class="wrapper">
+
+        <div class="container">
+            <div class="row">
+                <form onsubmit="event.preventDefault();">
+                    <div class="mb-3">
+                        <label class="form-label">Ime</label>
+                        <input type="text" class="form-control" id="ime">
+                        <div id="imeError" class="form-text err-text hide">Ime je obavezno polje.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Prezime</label>
+                        <input type="text" class="form-control" id="prezime">
+                        <div id="prezimeError" class="form-text err-text hide">Prezime je obavezno polje.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Godine</label>
+                        <input type="text" class="form-control" id="godine">
+                        <div id="godineError" class="form-text err-text hide">Godine su obavezno polje.</div>
+                        <div id="godineInvalidError" class="form-text err-text hide">Godine moraju biti broj.</div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Spol</label>
+                        <input type="text" class="form-control" id="spol">
+                        <div id="spolError" class="form-text err-text hide">Spol je obavezno polje.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Mjesto/Grad</label>
+                        <input type="text" class="form-control" id="mjesto">
+                        <div id="mjestoError" class="form-text err-text hide">Grad je obavezno polje.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <button class="btn btn-success" id="saveBtn">Spremi</button>
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
