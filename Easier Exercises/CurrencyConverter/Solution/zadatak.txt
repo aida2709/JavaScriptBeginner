@@ -1,0 +1,13 @@
+U ovom zadatku praviti cemo jednostavnu Currency Converter aplikaciju. Aplikacija ima za cilj konverziju iznosa
+iz jedne valute u drugu. Jedine dvije value koje cemo za sada iplementirati su BAM i EUR.
+
+Implementirati slijedece:
+
+1. Klikom na dugme `Izracunaj` treba da se pokupi iznos koji je unesen u input sa id-em `valuta1`, izracuna rezultat,
+te isti smjesti u polje sa id-em `valuta2`
+2. Pri tome imati na umu i validaciju. Prilikom klika na dugme `Izracunaj`, ako nista nije uneseno u `valuta1` polje,
+prikazati gresku sa id-em `error`.
+3. Prilikom unosa iznosa u polje `valuta1` sprijeciti korisnika da unosi slova
+4. Klikom na dugme `Zamijeni` treba da se zamijeni trenutni raspored valuta. Npr ako je bilo iz BAM u EUR, da sada
+bude iz EUR u BAM i obratno. Obratiti pozornost da se i naziv samih labela iznad odgovarajuceg inputa promijeni (valuta1Label
+i valuta1Label).
