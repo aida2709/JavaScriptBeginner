@@ -77,7 +77,6 @@ let books = [
 ];
 
 const columns = ['id', 'title', 'author'];
-let copyOfBooks = books;
 
 
 const tableBody = document.querySelector('.table tbody');// fetch <tbody></tbody> so we can append rows to it
@@ -89,11 +88,10 @@ function removeDuplicatesFromArray(array) {
 }
 
 function renderAuthorsIntoSelect() {
-    let authors = copyOfBooks.map(function (book) {
+    let authors = books.map(function (book) {
         return book.author;
     });
     authors = removeDuplicatesFromArray(authors);
-
 
     authors.forEach(item => {
         const option = document.createElement('option');
@@ -117,48 +115,49 @@ function createNewTableRow(book) {
     tableBody.appendChild(createdRow);
 }
 
-function generateList() {
-    books.forEach(book => {
-        createNewTableRow(book);
+function generateList(bookArray) {
+    bookArray.forEach(bookArray => {
+        createNewTableRow(bookArray);
     });
 }
 
-
-function refreshList() {
+function refreshList(bookArray) {
     tableBody.innerHTML = ''; // remove old content
-    generateList(); // re-render list
+    generateList(bookArray); // re-render list
 }
 
 function filterBooksByTitle(searchTitle) {
     if (!searchTitle || !searchTitle.length) {
-        books = copyOfBooks;
+        refreshList(books);
     } else {
-        books = copyOfBooks.filter(book => book.title.toLowerCase().includes(searchTitle.toLowerCase()));
+        let filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchTitle.toLowerCase()));
+        refreshList(filteredBooks);
     }
-
-    refreshList();
 }
 
 function filterBooksByAuthor(authorName) {
     if (!authorName || !authorName.length) {
-        books = copyOfBooks;
+        refreshList(books);
     } else {
-        books = copyOfBooks.filter(book => book.author === authorName);
+        let filteredBooks = books.filter(book => book.author === authorName);
+        refreshList(filteredBooks);
     }
-
-    refreshList();
 }
 
 
 searchInput.oninput = function () {
     filterBooksByTitle(searchInput.value);
-    authorSelect.value = '';
+    if(authorSelect.value){
+        authorSelect.value = '';
+    }
 }
 
 authorSelect.onchange = function () {
     filterBooksByAuthor(authorSelect.value);
-    searchInput.value = '';
+    if(searchInput.value){
+        searchInput.value = '';
+    }
 }
 
-generateList();
+generateList(books);
 renderAuthorsIntoSelect();
