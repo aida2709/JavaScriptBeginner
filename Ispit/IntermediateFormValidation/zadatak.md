@@ -12,3 +12,7 @@ div-ova po defaultu ima klasu `hide`. Ukoliko zelite da odredjeni error bude pri
 klasu `hide`. Te obratno, ako zelite ukloniti neki error - samo dodate klasu `hide`.
 
 U prilogu imate slike koje pokazuju kako sve treba na kraju izgledati.
+
+=====================================================================================================================
+35 Bodova
+=====================================================================================================================

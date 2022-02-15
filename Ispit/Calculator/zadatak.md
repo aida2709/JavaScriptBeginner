@@ -7,4 +7,9 @@ racunati rezultat.
 Opcija DEL treba da obrise sadrzaj input polja i rezultata.
 
 Napomena: ne dopustiti korisniku da u polje za znak unosi vise znakova. 
-Takodjer sprijeciti korisnika da u polje znak unosi nevalidne znakove.
+Takodjer sprijeciti korisnika da u polja unosi nevalidne znakove. Znak moze biti samo +,-,*,/
+Sto se prvog i drugog broja tice, potrebna je validacija da ne smije biti uneseno nista sto nije broj.
+
+=====================================================================================================================
+40 Bodova
+=====================================================================================================================
