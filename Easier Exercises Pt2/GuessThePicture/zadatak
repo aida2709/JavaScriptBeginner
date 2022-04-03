@@ -5,3 +5,9 @@ U `script.js` primjetiti cete niz `items`. U ovom nizu svaki objekat predstavlja
 Klikom na dugme `Next` treba da se prikaze slijedece pitanje. Korisnik ne mora uopste nista unijeti da bi presao na iduce pitanje (ali se u tom slucaju takav odgovor smatra netacnim). Kada dodje na zadnje pitanje i odabere `Next`, treba da se konacni rezultat prikaze u heading-u sa id-em `result` (da bi se isti prikazao potrebno mu je ukloniti klasu `hide`).
 
 Takodjer, klikom na dugme `Restart` igra treba da se restarta (prikazuje se prvo pitanje, resetuju se bodovi na nula, sakriva se konacni rezultat).
+
+======================================================================================================================
+Za dodatnu vjezbu:
+- Implementirati i Previous button, tako da se korisnik moze vratiti nazad na pitanje i revidirati odgovore. Ali ovo zahtjeva nesto tezu kalkulaciju odgovora. (Ideja: svakom objektu mozete dodati property `osvojenoBodova`)
+- Dodati opciju da se pamti history bodova (mozete uz te informacije pohranjivati datum i vrijeme kad je kviz odigran pa napraviti ljestvicu.)
+======================================================================================================================
