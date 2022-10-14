@@ -1,0 +1,7 @@
+a) Traziti od korisnika da unese tri programska jezika koja poznaje (koristiti prompt)
+
+b) Kreirati listu (ol). Dodati joj klase `list-group` i `list-group-numbered`
+
+c) Itemi (li) liste treba da budu unesena tri programska jezika. Svaki item treba da ima klasu `list-group-item`. 
+
+d) Listu dodati u body
