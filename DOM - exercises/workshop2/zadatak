@@ -1,0 +1,7 @@
+a) Dohvatiti element sa id-em `akcije`
+
+b) Kreirati element button sa sadrzajem `Spremi`. Potom ga dodati u prethodno dohvaceni element (akcije). Buttonu setovati klase `btn btn-success mx-1` 
+
+c) Kreirati element button sa sadrzajem `Obrisi`. Potom ga dodati u prethodno dohvaceni element (akcije). Buttonu setovati klase `btn btn-danger mx-1`
+
+d) Kreirati element button sa sadrzajem `Uredi`. Potom ga dodati u prethodno dohvaceni element (akcije). Buttonu setovati klase `btn btn-primary mx-1`
