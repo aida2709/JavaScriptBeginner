@@ -1,0 +1,13 @@
+***35 bodova***
+
+Doraditi prethodni zadatak (zadatak 2) na slijedeci nacin:
+
+a) Prvo pitati korisnika da unese titulu
+b) Ako je titula `Admin` korisniku treba prikazati sva tri buttona (Spremi, Obrisi, Uredi)
+   Ako je titula `Operator` korisniku prikazati buttone Spremi i Uredi
+   Ako je titula `Student` korisniku prikazati samo button Spremi
+   Ukoliko korisnik nije unio nijednu od navedenih titula, onda uraditi slijedece:
+   - Kreirati h1 element sa sadrzajem `Niste autorizovani`
+   - Kreiranom elementu setovati boju fonta crvenu
+   - Kreirani element dodati na body
+   
