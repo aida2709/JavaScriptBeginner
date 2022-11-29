@@ -1,0 +1,14 @@
+- U script.js fajlu cete primjetiti niz `students`. Cilj ovog zadatka je prikazati tabelu sa detaljima studenata.
+- Dohvatiti tabelu (table), te joj dodati klasu `table`
+- Dohvatiti `tbody` element koji se nalazi unutar tabele
+- Za svakog studenta u nizu `students` kreirati table row (red tabele - tr). 
+- Za svaki red dodati po dvije celije (td). Jedna treba da sadrzi u sebi ime studenta, a druga kurs koji je pohadjao. 
+- U konacnici biste za jedan red trebali dobiti nesto poput:
+````
+<tr>
+   <td>John Doe</td>
+   <td>Java Script</td>
+   <td>Yes</td>
+</tr>
+````
+- Doraditi zadatak tako da ako je student polozio kurs (passed : true) na taj tr dodate klasu `table-success`, a ako nije polozio (passed: false), na tr dodate klasu `table-danger`
