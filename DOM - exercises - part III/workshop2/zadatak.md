@@ -1,0 +1,12 @@
+- Traziti od korisnika da unese informaciju koliko ima godina
+- Dohvatiti div sa klasom `.container`
+- Kreirati sliku (img), te joj dodati klasu `img-fluid`. Slici setovati src atribut prema slijedecim uvjetima:
+    - Ako korisnik ima manje od 5 godina, src slike treba biti: `https://static.vecteezy.com/system/resources/previews/002/047/536/original/cute-baby-cat-illustration-vector.jpg`
+    - Ako korisnik ima vise od 5, ali manje od 18 godina, src slike treba biti `https://64.media.tumblr.com/bc6f54a2129ad9fc35d6965164bbeb9e/tumblr_pceawvswpm1rv5vrco1_1280.png`
+    - Ako korisnik ima vise od 18, ali manje od 65 godina, src slike treba biti `https://i.etsystatic.com/26211908/r/il/2daa6e/3558848506/il_fullxfull.3558848506_2ucz.jpg`
+    - Ako korisnik ima vise od 65 godina, src slike treba biti `https://www.shutterstock.com/image-vector/old-cat-isolated-grandpa-vector-260nw-2211084593.jpg`
+- Prethodno kreiranu sliku dodati u `.container div` kojeg ste prethodno dohvatili
+- Ukoliko godine koje je korisnik unio nisu validne (manje su od 0 ili su vece od 120), odraditi slijedece:
+    - Kreirati h3 element sa sadrzajem `Godine nisu validne`
+    - Dodati mu klasu `text-danger`
+    - Dodati ga u prethodno dohvaceni container

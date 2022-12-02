@@ -1,0 +1,9 @@
+a) Dohvatiti sve elemente sa klasom `row`. Dodati svakom klasu `gx-5`
+
+b) Dohvatiti sve elemente sa klasom `kolona`. Dodati svakom klasu `col`.
+
+c) Dohvatiti sve h5 elemente. Svakom dodati klasu `card-title`
+
+d) Dohvatiti sve p elemente. Svakom dodati klasu `card-text`
+
+e) Dohvatiti sve elemente sa klasom `btn-apply` te im dodati klase `btn` i  `btn-success`
