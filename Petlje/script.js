@@ -1,7 +1,7 @@
 // 1.
 
-// const n = parseInt(prompt('Unesite n'));
-// const k = parseInt(prompt('Unesite k'));
+// const n = Number(prompt('Unesite n'));
+// const k = Number(prompt('Unesite k'));
 
 // let brojac = n;
 
@@ -27,8 +27,8 @@
 
 // 3.
 
-// const n = parseInt(prompt('Unesite n'));
-// const k = parseInt(prompt('Unesite k'));
+// const n = Number(prompt('Unesite n'));
+// const k = Number(prompt('Unesite k'));
 
 // let brojac = n;
 
@@ -53,75 +53,76 @@
 // 5. 
 // a) while petlja
 
-// const n = parseInt(prompt('Koliko brojeva zelite unijeti?'));
-// let broj;
-// let brojac = 1;
+// const n = Number(prompt('Unesite n'));
+// const k = Number(prompt('Unesite k'));
 
-// while (brojac <= n) {
-//     broj = parseFloat(prompt('Unesite broj: '));
+// let brojac = n;
+// let suma=0;
+// let sumaParnih=0;
+// let proizvod=1;
+// let ukupnoBrojeva=0;
+
+// while (brojac <= k) {
+//     if (brojac % 2 == 0) {
+//         sumaParnih+=brojac;
+//     } else{
+//         proizvod*=brojac;
+//     }
+
+//     suma+=brojac;
+//     ukupnoBrojeva++;
 //     brojac++;
 // }
 
+// console.log(`Suma parnih brojeva u intervalu od ${n} do ${k} je: ${sumaParnih}`);
+// console.log(`Proizvod neparnih brojeva u intervalu od ${n} do ${k} je: ${proizvod}`);
+// console.log(`Aritmeticka sredina brojeva u intervalu od ${n} do ${k} je: ${suma/ukupnoBrojeva}`);
+
+
 // b) do-while petlja
 
-// const n = parseInt(prompt('Koliko brojeva zelite unijeti?'));
-// let broj;
-// let brojac = 1;
+// const n = Number(prompt('Unesite n'));
+// const k = Number(prompt('Unesite k'));
+
+// let brojac = n;
+// let suma=0;
+// let sumaParnih=0;
+// let proizvod=1;
+// let ukupnoBrojeva=0;
 
 // do {
-//     broj = parseFloat(prompt('Unesite broj: '));
+//     if (brojac % 2 == 0) {
+//         sumaParnih+=brojac;
+//     } else{
+//         proizvod*=brojac;
+//     }
+
+//     suma+=brojac;
+//     ukupnoBrojeva++;
 //     brojac++;
-// } while (brojac <= n);
+// } while (brojac <= k);
+
+// console.log(`Suma parnih brojeva u intervalu od ${n} do ${k} je: ${sumaParnih}`);
+// console.log(`Proizvod neparnih brojeva u intervalu od ${n} do ${k} je: ${proizvod}`);
+// console.log(`Aritmeticka sredina brojeva u intervalu od ${n} do ${k} je: ${suma/ukupnoBrojeva}`);
 
 
-// 6. 
-// a) while petlja
 
-// const n = parseInt(prompt('Koliko brojeva zelite unijeti?'));
-// let broj;
-// let brojac = 1;
-// let suma = 0;
-
-// while (brojac <= n) {
-//     broj = parseFloat(prompt('Unesite broj: '));
-//     suma += broj;
-//     brojac++;
+// 6.
+// for(let i=1; i<=10;i++){
+//     console.log(i);
 // }
-
-// alert('Suma unesenih brojeva je ' + suma);
-
-// b) do-while petlja
-
-// const n = parseInt(prompt('Koliko brojeva zelite unijeti?'));
-// let broj;
-// let brojac = 1;
-// let suma = 0;
-
-// do {
-//     broj = parseFloat(prompt('Unesite broj: '));
-//     suma += broj;
-//     brojac++;
-// } while (brojac <= n);
-
-// alert('Suma unesenih brojeva je ' + suma);
-
-
 
 // 7.
-// let broj;
 
-// do {
-//     broj = parseFloat(prompt('Unesite broj: '));
-// } while (broj !== 0);
-
+// for(let i=10; i>=1;i--){
+//     console.log(i);
+// }
 
 // 8.
-// let broj;
-// let suma = 0;
-
-// do {
-//     broj = parseFloat(prompt('Unesite broj: '));
-//     suma += broj;
-// } while (broj !== 0);
-
-// alert('Suma unesenih brojeva je ' + suma);
+// let n = Number(prompt('Unesite n: '));
+// for(let i=1; i<=10;i++){
+//     if(i%2==0){
+//         console.log(i);
+//     }
+// }
