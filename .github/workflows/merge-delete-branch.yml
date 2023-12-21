@@ -19,7 +19,7 @@ jobs:
         git fetch --prune
 
         # Get the list of branches that were merged
-        branches=$(git branch --merged | grep -vE '^\*|master|release')
+        branches=$(git branch -r --merged | grep -vE '^\s*master|release' | sed 's/origin\///')
 
         # Check if any branches are merged
         if [ -n "$branches" ]; then
