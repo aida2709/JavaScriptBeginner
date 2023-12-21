@@ -23,9 +23,12 @@ jobs:
 
         # Check if any branches are merged
         if [ -n "$branches" ]; then
-          # Loop through branches and delete them
+          # Loop through branches and force-delete them
           for branch in $branches; do
-            git branch -D "$branch" || true
+            # Delete remote branch
+            git push origin --delete "$branch" || true
+            # Delete local branch
+            git branch -d "$branch" || true
           done
         else
           echo "No branches to delete."
