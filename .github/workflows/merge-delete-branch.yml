@@ -3,7 +3,7 @@ name: Delete Merged Branch
 on:
   push:
     branches:
-      - master # Set this to your default branch
+      - master
 
 jobs:
   delete-branch:
@@ -16,5 +16,18 @@ jobs:
     - name: Delete Merged Branch
       run: |
         git fetch --prune
-        git branch -d "$(git branch --merged | grep -vE '^\*|master|release')"
+
+        # Get merged branches excluding master and release/*
+        branches=$(git branch --merged | grep -vE '^\*|master|release')
+
+        # Check if any branches are merged
+        if [ -n "$branches" ]; then
+          # Loop through branches and delete them
+          for branch in $branches; do
+            git branch -d "$branch"
+          done
+        else
+          echo "No branches to delete."
+        fi
+
         git remote prune origin
