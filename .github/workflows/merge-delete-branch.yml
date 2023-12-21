@@ -19,13 +19,13 @@ jobs:
         git fetch --prune
 
         # Get the list of branches that were merged
-        branches=$(git log -1 --merges --pretty=format:'%b' | grep -o -E '(\w+/[^\s]+)')
+        branches=$(git branch --merged | grep -vE '^\*|master|release')
 
         # Check if any branches are merged
         if [ -n "$branches" ]; then
           # Loop through branches and delete them
           for branch in $branches; do
-            git branch -d "$branch"
+            git branch -d "$branch" || true
           done
         else
           echo "No branches to delete."
