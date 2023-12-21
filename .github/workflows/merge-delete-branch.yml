@@ -3,7 +3,7 @@ name: Delete Merged Branch
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   delete-branch:
@@ -13,12 +13,13 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Delete Merged Branch
+    - name: Get Merged Branches
       run: |
+        # Fetch and prune to ensure we have the latest information
         git fetch --prune
 
-        # Get merged branches excluding master and release/*
-        branches=$(git branch --merged | grep -vE '^\*|master|release')
+        # Get the list of branches that were merged
+        branches=$(git log -1 --merges --pretty=format:'%b' | grep -o -E '(\w+/[^\s]+)')
 
         # Check if any branches are merged
         if [ -n "$branches" ]; then
