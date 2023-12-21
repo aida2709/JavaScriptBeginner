@@ -1,0 +1,20 @@
+name: Delete Merged Branch
+
+on:
+  push:
+    branches:
+      - master # Set this to your default branch
+
+jobs:
+  delete-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Delete Merged Branch
+      run: |
+        git fetch --prune
+        git branch -d "$(git branch --merged | grep -vE '^\*|master|release')"
+        git remote prune origin
