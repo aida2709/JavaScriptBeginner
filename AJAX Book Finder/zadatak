@@ -1,0 +1,14 @@
+U ovom zadatku praviti cemo Book Finder aplikaciju. Aplikacija ima za cilj pretragu i prikaz razlicitih knjiga.
+
+
+Implementirati slijedece:
+
+1. Prikazati sve knjige u tabeli
+- Cim se web stranica ucita, u tabelu (koju mozete primjetit u `index.html`) ucitati knjige (books) koje cete dobiti sa API rute `https://gutendex.com/books` . U tabeli je potrebno prikazati id knjige, naslov knjige, te sve autore knjige medjusobno razdvojene znakom zareza.
+
+2. Pretraga po naslovu knjige
+- U `index.html` primjetiti cete input sa id-em `search`, te button sa id-em `searchBtn`
+- Klikom na `searchBtn` treba da se odradi pretraga knjiga. Ruta koju cete pozivati u tom slucaju je: `https://gutendex.com/books?search=${uneseniNazivKnjige}`. U tabeli prikazati samo knjige koje ova ruta vrati.
+- Ako korisnik nista ne unese u ovo polje, treba da se prikazu sve knjige
+
+3. Dok traje API poziv, zabraniti klik na search button. Cim se API poziv zavrsi, na button se opet moze klikati.

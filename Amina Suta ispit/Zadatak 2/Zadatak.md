@@ -1,0 +1,5 @@
+a) Dohvatiti element sa id-em `naslov`. Istom setovati crvenu boju teksta, velicinu fonta 24px, te padding od po 8px.
+
+b) Dohvatiti sve elemente sa klasom `column`, te im dodati klasu `col-sm-6`.
+
+c) Dohvatiti sve elemente sa klasom `subtitle`, te im setovati slijedeci stil: boja teksta `#0ca9c9`, velicina fonta `18px`, stil fonta `italic`
