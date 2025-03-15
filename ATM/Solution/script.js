@@ -22,7 +22,6 @@ const users = [
     }
 ];
 
-let currentUser = null;
 const loginDiv = document.getElementById('login');
 const homeDiv = document.getElementById('home');
 const cardNumberInput = document.getElementById('cardNumber');
@@ -37,6 +36,7 @@ const payoutBtn = document.getElementById('payoutBtn');
 const payoutDiv = document.getElementById('payoutDiv');
 const payoutActionBtn = document.getElementById('payoutActionBtn');
 const amountToPayout = document.getElementById('amountToPayout');
+let currentUser = null;
 
 function hideErrors() {
     cardNumberError.classList.add('hide'); pinError
@@ -116,7 +116,7 @@ loginBtn.onclick = function () {
         cleanUpForm();
         showHomePage();
     } else {
-        alert('Korisnicki podaci nisu ispravni!');
+        alert('Entered data is not valid');
     }
 }
 
@@ -128,7 +128,7 @@ cancelBtn.onclick = function () {
 balanceBtn.onclick = function () {
     showBalanceDiv();
     const balanceAmount = document.getElementById('balanceAmount');
-    balanceAmount.innerText = `Stanje racuna iznosi ${currentUser.amount} KM`;
+    balanceAmount.innerText = `Balance is ${currentUser.amount} EUR`;
 }
 
 payoutBtn.onclick = function () {
@@ -145,8 +145,8 @@ payoutActionBtn.onclick = function () {
     if (amount <= currentUser.amount) {
         currentUser.amount -= amount;
         amountToPayout.value = '';
-        alert('Novac je uspjesno isplacen!');
+        alert('The money has been successfully paid out.');
     } else {
-        alert('Nemate dovoljno sredstava na racunu!');
+        alert('You don`t have enough money on your account.');
     }
 }
