@@ -1,5 +1,0 @@
-***35 bodova***
-
-U index.html cete primjetiti div sa id-em `counter`. Cilj ovog zadatka jeste da kada se god klikne na ovaj div, da untar njega bude ispisan ukupan broj klikova misem. Npr: `Kliknuli ste 3 puta`.
-
-Button `Reset` treba da resetuje brojac klikova na nula.
