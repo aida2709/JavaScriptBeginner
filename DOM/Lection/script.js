@@ -1,5 +1,4 @@
 // 1.
-
 const titleElement = document.getElementById('title');
 titleElement.innerText = 'Document Object Model';
 
@@ -18,7 +17,7 @@ console.log('headings', headings);
 // 5.
 const firstLi = document.querySelector('li');
 firstLi.innerText = 'Angular (framewok)';
-// ili
+// OR
 // firstLi.innerText += ' (framework)';
 
 // 6.
@@ -37,7 +36,7 @@ titleElement.style.color = 'violet';
 const alert = document.getElementById('alert');
 alert.classList.remove('alert-primary');
 alert.classList.add('alert-success');
-// ili
+// OR
 // alert.classList.replace('alert-primary', 'alert-success');
 
 // 9

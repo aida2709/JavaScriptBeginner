@@ -1,9 +1,10 @@
-- Kreirati h1 sa sadrzajem "My Book List".
+- Create an `h1` with the content "My Book List".
 
-- Kopirati slijedeci niz knjiga:
+- Copy the following list of books:
+    ```js
     const books = [
     {
-        title: 'The Design of EveryDay Things',
+        title: 'The Design of Everyday Things',
         author: 'Don Norman',
         alreadyRead: false,
         url: 'https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654'
@@ -19,8 +20,9 @@
         alreadyRead: true,
         url: 'https://www.amazon.com/Book-Thief-Markus-Zusak/dp/0375842209/ref=sr_1_1?crid=1XG08069AOI5D&keywords=The+Book+Thief&qid=1641049848&s=books&sprefix=the+book+thief%2Cstripbooks-intl-ship%2C216&sr=1-1'
     }
-];
+    ];
+    ```
 
-- Kreirati listu ciji ce item-i biti naziv knjige + autor
-- Svaki list item treba da bude link koji vodi do url-a iz niza
-- Ako je knjiga procitana, pozadina itema treba biti zute boje
+- Create a list where each item will be the book's title + author.
+- Each list item should be a link that leads to the URL from the array.
+- If the book has been read, the background of the item should be yellow.

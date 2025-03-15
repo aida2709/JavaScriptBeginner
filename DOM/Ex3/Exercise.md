@@ -1,0 +1,1 @@
+In the text inside the `<p>` tag, set the background color to yellow for all the bolded words.

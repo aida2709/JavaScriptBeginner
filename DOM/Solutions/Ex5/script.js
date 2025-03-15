@@ -1,7 +1,9 @@
-- Kreirati h1 sa sadrzajem "My Book List".
+const heading = document.createElement('h1');
+heading.innerText = 'My Book List';
 
-- Kopirati slijedeci niz knjiga:
-    const books = [
+document.body.appendChild(heading);
+
+const books = [
     {
         title: 'The Design of EveryDay Things',
         author: 'Don Norman',
@@ -21,6 +23,18 @@
     }
 ];
 
-- Kreirati listu ciji ce item-i biti naziv knjige + autor
-- Svaki list item treba da bude link koji vodi do url-a iz niza
-- Ako je knjiga procitana, pozadina itema treba biti zute boje
+const list = document.createElement('ul');
+const listItems = books.map(book => {
+    const li = document.createElement('li');
+    li.innerHTML = `<a href=${book.url}>${book.title} - ${book.author}</a>`
+    if (book.alreadyRead) {
+        li.style.backgroundColor = 'yellow';
+    }
+    return li;
+});
+
+list.append(...listItems);
+
+document.body.appendChild(list);
+
+
