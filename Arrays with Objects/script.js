@@ -1,3 +1,4 @@
+// ```javascript
 // let students = [
 //   {
 //     firstName: "Sam",
@@ -42,6 +43,7 @@
 //     birthDate: "27.01.1994.",
 //   },
 // ];
+// ```
 
 // // helper method
 // const displayStudentInfo = (student) => {
@@ -58,29 +60,29 @@
 
 // // 1.a)
 // const studentsWithLetterM = students.filter((el) => el.firstName.toLowerCase().includes('m') || el.lastName.toLowerCase().includes('m'));
-// console.log('Studenti koji imaju slovo M u imenu ili prezimenu su: ');
+// console.log('Students who have the letter M in their first or last name are: ');
 // displayBasicStudentsInfo(studentsWithLetterM);
 
 // // 1.b)
-// console.log(`Ukupno je ${studentsWithLetterM.length} takvih studenata`);
+// console.log(`There are ${studentsWithLetterM.length} such students in total`);
 
 // // 1.c)
 // const studentsWithStartingLetterM = students.filter((el) => el.firstName.startsWith('M') || el.lastName.startsWith('M'));
-// console.log('\nStudenti kojima ime ili prezime pocinju slovom M: ');
+// console.log('\nStudents whose first or last name starts with the letter M: ');
 // displayBasicStudentsInfo(studentsWithStartingLetterM);
-// console.log(`Ukupno je ${studentsWithStartingLetterM.length} takvih studenata`);
+// console.log(`There are ${studentsWithStartingLetterM.length} such students in total`);
 
 // 1.d)
-// const searchedName = prompt('Unesite ime i prezime studenta kojeg pretrazujete');
+// const searchedName = prompt('Enter the full name of the student you are searching for');
 // const foundStudentIndex = students.findIndex((el) => `${el.firstName} ${el.lastName}` === searchedName);
 // if (foundStudentIndex !== -1) {
-//     console.log(`Taj student se nalazi na poziciji ${foundStudentIndex}`);
+//     console.log(`That student is at position ${foundStudentIndex}`);
 // } else {
-//     console.warn('Nije pronadjen niti jedan student sa unesenim imenom i prezimenom');
+//     console.warn('No student found with the entered full name');
 // }
 
 // // 1.e)
-// console.log('\nStudenti sortirani abecedno:');
+// console.log('\nStudents sorted alphabetically:');
 // students.sort((a, b) => {
 //   if (a.lastName < b.lastName) {
 //     return -1;
@@ -93,23 +95,23 @@
 // displayBasicStudentsInfo(students);
 
 // // 1.f)
-// const stundetsWithFullName = students.map((el) => ({
+// const studentsWithFullName = students.map((el) => ({
 //     fullName: `${el.lastName} - ${el.firstName}`,
 //     averageGrade: el.averageGrade,
 //     birthDate: el.birthDate,
 // }));
-// console.log('stundetsWithFullName', stundetsWithFullName);
+// console.log('studentsWithFullName', studentsWithFullName);
 
 // // 1.g)
 // const copy = [...students];
 // copy.sort((a, b) => b.averageGrade - a.averageGrade);
 // console.log(copy);
 // const bestStudent = copy[0];
-// console.log('\nStudent sa najboljim prosjekom je:');
+// console.log('\nThe student with the best average grade is:');
 // displayStudentInfo(bestStudent);
 
 // // 1.h)
-// const year = prompt("Unesite godinu koju pretrazujete");
+// const year = prompt("Enter the year you are searching for");
 // const studentsByYear = students.filter((el) => {
 //   const dateParts = el.birthDate.split(".");
 //   const birthYear = dateParts[dateParts.length - 2];
@@ -118,10 +120,10 @@
 // });
 
 // if (studentsByYear.length) {
-//   console.log("\nStudenti rodjeni te godine su: ");
+//   console.log("\nStudents born in that year are: ");
 //   displayBasicStudentsInfo(studentsByYear);
 // } else {
-//   console.warn("Ne postoji niti jedan student koji je rodjen te godine.");
+//   console.warn("There is no student born in that year.");
 // }
 
 
@@ -137,12 +139,12 @@ const displayBasicProductInfo = (product) => {
 }
 
 // 2.a)
-const categoryName = prompt("Unesite naziv kategorije");
+const categoryName = prompt("Enter the category name");
 const productByCategory = products.filter((el) => el.category.toLowerCase() === categoryName.toLowerCase());
 if (productByCategory.length) {
-  console.log("Proizvodi po kategoriji", productByCategory);
+  console.log("Products by category", productByCategory);
 } else {
-  console.warn("Ne postoji nijedan proizvod sa unesenom kategorijom");
+  console.warn("There is no product with the entered category");
 }
 
 // 2.b)
@@ -155,7 +157,7 @@ console.log('prices', prices);
 // prices.forEach((price) => {
 //   sum += price;
 // });
-// console.log("Prosjecna cijena iznosi: ", sum / prices.length);
+// console.log("The average price is: ", sum / prices.length);
 
 // Second way (better)
 const sum = prices.reduce(
@@ -163,29 +165,29 @@ const sum = prices.reduce(
   0,
 );
 
-console.log("Prosjecna cijena iznosi: ", sum / prices.length);
+console.log("The average price is: ", sum / prices.length);
 
 // 2.d)
 const copy = [...products];
 copy.sort((a, b) => a.price - b.price);
-console.log("Sortirano od najmanje cijene ka najvecoj", copy);
+console.log("Sorted from the lowest price to the highest", copy);
 
 // 2.f)
 const mostCheapProduct = copy[0];
 const mostExpensiveProduct = copy[copy.length - 1];
 
-console.log('Najjeftiniji proizvod je');
+console.log('The cheapest product is');
 displayBasicProductInfo(mostCheapProduct);
-console.log('Najskuplji proizvod je');
+console.log('The most expensive product is');
 displayBasicProductInfo(mostExpensiveProduct);
 
 // 2.g)
-const price = Number(prompt("Unesite cijenu"));
+const price = Number(prompt("Enter the price"));
 const productsByPrice = products.filter((el) => el.price >= price);
 if (productsByPrice.length) {
-  console.log("Proizvodi po cijeni", productsByPrice);
+  console.log("Products by price", productsByPrice);
 } else {
   console.warn(
-    "Ne postoji nijedan proizvod sa cijenom vecom ili jednakom od unesene"
+    "There is no product with a price greater than or equal to the entered amount"
   );
 }
