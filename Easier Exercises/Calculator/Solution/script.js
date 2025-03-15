@@ -6,7 +6,7 @@ const deleteButton = document.getElementById('deleteBtn');
 const rezultat = document.getElementById('rezultat');
 const allowedSymbols = ['+', '-', '/', '*', '%'];
 
-function izracunajRezultat() {
+function calculateResult() {
     let prviBroj = prviBrojInput.value && parseFloat(prviBrojInput.value);
     let drugiBroj = drugiBrojInput.value && parseFloat(drugiBrojInput.value);
     let znak = znakInput.value;
@@ -25,9 +25,7 @@ function izracunajRezultat() {
     }
 }
 
-claculateButton.onclick = function () {
-    izracunajRezultat();
-}
+claculateButton.onclick = calculateResult;
 
 znakInput.oninput = function () {
     if (znakInput.value.length > 1) { // ako neko unese dva znaka npr ++ ili +-

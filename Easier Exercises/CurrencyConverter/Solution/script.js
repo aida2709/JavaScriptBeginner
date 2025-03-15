@@ -23,9 +23,7 @@ function doCalculation() {
     }
 }
 
-calculateBtn.onclick = function () {
-    doCalculation();
-}
+calculateBtn.onclick = doCalculation;
 
 changeBtn.onclick = function () {
     if (currentMode === 'BAM-EUR') {
@@ -41,7 +39,7 @@ changeBtn.onclick = function () {
 }
 
 valuta1Input.oninput = function () {
-    if (valuta1Input.value && isNaN(valuta1Input.value)) { // ako unesena vrijednost nije broj, ukloni zadnji uneseni karakter
+    if (valuta1Input.value && isNaN(valuta1Input.value)) { // if entered value is not a number, delete laste entered character
         valuta1Input.value = valuta1Input.value.substring(0, valuta1Input.value.length - 1);
     }
 }
