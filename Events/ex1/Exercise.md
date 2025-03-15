@@ -1,0 +1,1 @@
+When the user clicks the Submit button, display a message in the alert window: 'Data successfully saved'.

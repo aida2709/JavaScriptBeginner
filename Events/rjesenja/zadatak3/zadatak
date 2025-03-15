@@ -1,6 +1,0 @@
-U index.html primjetiti cete div sa id-em kvadrat.
-Napraviti mini igricu sa slijedecim osobinama:
-- kvadrat treba da se pomice (lijevo, desno, gore, dolje) u ovisnosti
-od toga koja strelica (arrow) je na keyboardu kliknuta za po 20px
-- klikom na kvadrat, isti mijenja boju. Svakim klikom, kvadrat
-treba da poprimi novu random generiranu boju

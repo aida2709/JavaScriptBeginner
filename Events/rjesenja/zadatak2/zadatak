@@ -1,7 +1,0 @@
-Simulirati rad kalkulatora.
-Korisnik preko forme unosi dva broja i znak za operaciju.
-Rezultat se treba prikazivati i automatski racunati na svaku promjenu input 
-polja (prviBroj, drugiBroj, znak).
-Opcija DEL treba da obrise sadrzaj input polja i rezultata.
-Napomena: ne dopustiti korisniku da u polje za znak unosi vise znakova. 
-Takodjer sprijeciti korisnika da u polje znak unosi nevalidne znakove.

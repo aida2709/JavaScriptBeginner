@@ -1,4 +1,4 @@
-const input = document.getElementById('tekst');
+const input = document.getElementById('text');
 
 
 input.onfocus = function () {
@@ -13,7 +13,7 @@ input.onblur = function () {
 
 input.onkeyup = function(){
     if(input.value.toLowerCase() === 'javascript'){
-        alert('Dobrodosli na JS kurs!');
+        alert('Welcome to JS course!');
     }
 }
 

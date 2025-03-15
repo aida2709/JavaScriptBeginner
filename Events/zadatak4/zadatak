@@ -1,3 +1,0 @@
-Dodati event listener za klik nad div elementu.
-Dodati paragraf p u div  koji treba da sadrzi informaciju koliko je puta kliknuto na njega.
-Button `Reset` treba da resetuje brojac klikova na nula.
