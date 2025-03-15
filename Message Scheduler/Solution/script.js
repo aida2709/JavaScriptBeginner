@@ -43,6 +43,32 @@ function refreshList() {
     generateList(); // re-render list
 }
 
+function createActionsCell(message) {
+  // Action cell (Start & Delete buttons)
+  let cell = document.createElement("td");
+
+  let startButton = document.createElement("button");
+  startButton.innerText = "Start";
+  startButton.classList.add("btn", "btn-success");
+
+  startButton.onclick = function () {
+    startScheduler(message);
+  };
+  cell.appendChild(startButton);
+
+
+  let deleteButton = document.createElement('button');
+  deleteButton.innerText = 'Delete';
+  deleteButton.classList.add('btn', 'btn-danger');
+
+  deleteButton.onclick = function () {
+      deleteMessage(message.id);
+  }
+  cell.appendChild(deleteButton);
+
+  return cell;
+}
+
 function createNewTableRow(message) {
     const createdRow = document.createElement('tr');
 
@@ -56,29 +82,7 @@ function createNewTableRow(message) {
         return cell;
     });
 
-    // Action cell (Start & Delete buttons)
-    let cell = document.createElement('td');
-
-    let startButton = document.createElement('button');
-    startButton.innerText = 'Start';
-    startButton.classList.add('btn', 'btn-success');
-
-    startButton.onclick = function () {
-        startScheduler(message);
-    }
-    cell.appendChild(startButton);
-
-
-    let deleteButton = document.createElement('button');
-    deleteButton.innerText = 'Delete';
-    deleteButton.classList.add('btn', 'btn-danger');
-
-    deleteButton.onclick = function () {
-        deleteMessage(message.id);
-    }
-    cell.appendChild(deleteButton);
-
-    cells.push(cell);
+    cells.push(createActionsCell(message));
     // Action cell END
 
     createdRow.append(...cells);

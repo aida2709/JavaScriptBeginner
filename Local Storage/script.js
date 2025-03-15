@@ -4,7 +4,7 @@ let savedTheme = localStorage.getItem('theme');
 console.log('savedTheme', savedTheme);
 localStorage.removeItem('theme');
 savedTheme = localStorage.getItem('theme');
-console.log('savedTheme', savedTheme); // biti ce null
+console.log('savedTheme', savedTheme); // it will be null
 localStorage.clear();
 
 
