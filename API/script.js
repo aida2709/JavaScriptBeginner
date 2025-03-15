@@ -5,7 +5,7 @@ function getMeowFacts(url) {
 }
 
 getMeowFacts('https://meowfacts.herokuapp.com/').then((response) => {
-    console.log('odgovor', response);
+    console.log('response from the API', response);
 }).catch((err)=> {
     console.log('An error has ocurred', err);
 });
