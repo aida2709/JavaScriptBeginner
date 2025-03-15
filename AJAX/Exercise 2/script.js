@@ -1,4 +1,4 @@
-// 1. nacin - losiji
+// 1st way - not so good
 
 // const showDogButton = document.getElementById("showDogBtn");
 
@@ -23,7 +23,7 @@
 //     });
 // };
 
-// 2. nacin - bolji
+// 2nd way - better
 const showDogButton = document.getElementById("showDogBtn");
 
 const disableButton = () => {
@@ -51,8 +51,8 @@ const fetchDogImage = () =>
 showDogButton.onclick = () => {
   disableButton();
   fetchDogImage()
-    .then((response) => {
-      generateImage(response.message);
+    .then(({ message }) => {
+      generateImage(message);
     })
     .catch((error) => {
       console.error("Api request has failed", error);

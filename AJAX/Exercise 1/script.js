@@ -1,4 +1,4 @@
-// 1. nacin - los
+// 1st way - not so good
 // const getFactButton = document.getElementById("getFactBtn");
 
 // getFactButton.onclick = () => {
@@ -22,18 +22,22 @@
 //     });
 // };
 
-//2. nacin bolji
+//2nd way - better
 const getFactButton = document.getElementById("getFactBtn");
 
-generateFactsList = (facts) => {
+const generateListItem = (fact) => {
+  const listItem = document.createElement("li");
+  listItem.innerText = fact;
+  listItem.classList.add("list-group-item");
+  return listItem;
+}
+
+const generateFactsList = (facts) => {
   const list = document.createElement("ul");
   list.classList.add("list-group");
 
-  facts.forEach((el) => {
-    const listItem = document.createElement("li");
-    listItem.innerText = el.fact;
-    listItem.classList.add("list-group-item");
-    list.appendChild(listItem);
+  facts.forEach(({ fact }) => {
+    list.appendChild(generateListItem(fact));
   });
 
   document.body.appendChild(list);
@@ -44,8 +48,8 @@ const getCatFacts = () => fetch("https://catfact.ninja/facts")
 
 getFactButton.onclick = () => {
   getCatFacts()
-    .then((response) => {
-      generateFactsList(response.data);
+    .then(({ data }) => {
+      generateFactsList(data);
     })
     .catch((error) => {
       console.error("Request has failed", error);

@@ -1,5 +1,5 @@
-## Random thing to do
-1. Kreirati button sa tekstom `Tell me what to do` (mozete u index.html). Button treba da ima klase `btn btn-info`.
-2. Klikom na ovaj button treba da se dohvate podaci sa API rute `https://www.boredapi.com/api/activity`
-3. Ukoliko su sa API-a uspjesno dohvaceni podaci, kreirati tabelu u kojoj ce te prikazati `activity`, `participants`, `type` i `price`. Svaki put kada se klikne na button, u tabelu treba da se doda novi red sa novom aktivnosti.
-4. Ukoliko poziv ka API-u padne, ispisati poruku o greski u koznoli.
+## Random Thing to Do  
+1. Create a button with the text `Tell me what to do` (you can add it in `index.html`). The button should have the classes `btn btn-info`.  
+2. When this button is clicked, fetch data from the API endpoint `https://www.boredapi.com/api/activity`.  
+3. If the data is successfully retrieved from the API, create a table displaying the following information: `activity`, `participants`, `type`, and `price`. Each time the button is clicked, a new row with a new activity should be added to the table.  
+4. If the API request fails, log an error message to the console.

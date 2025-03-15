@@ -1,4 +1,4 @@
-// I nacin - losiji
+// 1st way - not so good
 
 // const activityButton = document.getElementById("activityButton");
 // const tableBody = document.querySelector('tbody');
@@ -32,7 +32,7 @@
 //     });
 // };
 
-// II nacin - bolji
+// 2nd way - better
 const activityButton = document.getElementById("activityButton");
 const tableBody = document.querySelector("tbody");
 
