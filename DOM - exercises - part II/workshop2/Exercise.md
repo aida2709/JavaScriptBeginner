@@ -1,0 +1,12 @@
+- Ask the user to enter their age.
+- Retrieve the div with the class `.container`.
+- Create an image (img) and add the class `img-fluid`. Set the `src` attribute of the image based on the following conditions:
+    - If the user is younger than 5 years old, the image `src` should be: `https://static.vecteezy.com/system/resources/previews/002/047/536/original/cute-baby-cat-illustration-vector.jpg`
+    - If the user is older than 5 but younger than 18, the image `src` should be: `https://64.media.tumblr.com/bc6f54a2129ad9fc35d6965164bbeb9e/tumblr_pceawvswpm1rv5vrco1_1280.png`
+    - If the user is older than 18 but younger than 65, the image `src` should be: `https://i.etsystatic.com/26211908/r/il/2daa6e/3558848506/il_fullxfull.3558848506_2ucz.jpg`
+    - If the user is older than 65, the image `src` should be: `https://www.shutterstock.com/image-vector/old-cat-isolated-grandpa-vector-260nw-2211084593.jpg`
+- Add the previously created image to the `.container` div that was retrieved earlier.
+- If the user's entered age is invalid (less than 0 or greater than 120), do the following:
+    - Create an h3 element with the text `Age is not valid`.
+    - Add the class `text-danger` to it.
+    - Add it to the previously retrieved container.

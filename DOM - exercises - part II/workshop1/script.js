@@ -8,11 +8,11 @@ listItems.forEach(li => {
     li.classList.add('list-group-item');
 });
 
-// c) i d)
-const index = Number(prompt('Unesite redni broj vjestine koju najbolje poznajete'));
+// c) & d)
+const index = Number(prompt('Enter the index number of the skill you are best at.'));
 if (index < 0 || index >= listItems.length) {
     const error = document.createElement('h3');
-    error.innerText = 'Redni broj koji ste unijeli nije validan';
+    error.innerText = 'The index you entered is not valid.';
     error.classList.add('text-danger');
     document.body.appendChild(error);
 

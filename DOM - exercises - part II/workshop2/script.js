@@ -1,5 +1,5 @@
 const container = document.querySelector('.container');
-const years = Number(prompt('Koliko imate godina'));
+const years = Number(prompt('How old are you ?'));
 
 const image = document.createElement('img');
 let src;
@@ -7,7 +7,7 @@ image.classList.add('img-fluid');
 
 if (years <= 0 || years > 120) {
     const errorMessage = document.createElement('h3');
-    errorMessage.innerText = 'Godine nisu validne';
+    errorMessage.innerText = 'Years are not valid';
     errorMessage.classList.add('text-danger');
     container.appendChild(errorMessage);
 } else if (years > 0 && years <= 5) {
