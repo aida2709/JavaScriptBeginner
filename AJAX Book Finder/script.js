@@ -19,8 +19,8 @@ const createNewTableRow = (book) => {
 const generateList = (bookArray) => {
   tableBody.innerHTML = ""; // remove old content
 
-  bookArray.forEach((bookArray) => {
-    createNewTableRow(bookArray);
+  bookArray.forEach((book) => {
+    createNewTableRow(book);
   });
 };
 
@@ -38,8 +38,8 @@ const getBooksFromApi = (queryParams = "") =>
 const loadBooks = (queryParams = "") => {
   disableSearchButton();
   getBooksFromApi(queryParams)
-    .then((response) => {
-      const books = response.results.map((book) => ({
+    .then(({ results }) => {
+      const books = results.map((book) => ({
         id: book.id,
         title: book.title,
         authors: book.authors.map((author) => author.name).join(),
