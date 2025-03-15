@@ -1,9 +1,8 @@
 // /**
-//  * a) Kreirati objekat Knjiga koji u sebi ima slijedeće atribute:​
-// naziv knjige, autor, žanr, godina izdavanja, ocjena​
+//  * a) Create a Book object with the following attributes:​
+// book name, author, genre, publishing year, rating​
 // ​
-// b) Kreirati funkciju unutar objekta "displayDetails" koja ispisuje sve detalje o knjizi i pozvati je kako bi se ispisali detalji​
-
+// b) Create a function within the object "displayDetails" that prints all the details about the book and call it to display the details​
 //  */
 
 // const book = {
@@ -15,19 +14,19 @@
 
 //   displayDetails: function () {
 //     console.log(`${this.name} - ${this.author}`);
-//     console.log(`Zanr: ${this.genre}`);
-//     console.log(`Godina izdavanja: ${this.publishingYear}`);
-//     console.log(`Ocjena: ${this.rating}/10`);
+//     console.log(`Genre: ${this.genre}`);
+//     console.log(`Publishing Year: ${this.publishingYear}`);
+//     console.log(`Rating: ${this.rating}/10`);
 //   },
 // };
 
 // book.displayDetails();
 
 // /**
-//  * a) Kreirati objekat Predmet koji u sebi ima slijedeće atribute:​
-// naziv predmeta, lista predavaca (niz stringova), godina studija na kojoj se predaje predmet, broj ECTS bodova​
+//  * a) Create a Subject object with the following attributes:​
+// subject name, list of professors (array of strings), study year in which the subject is taught, number of ECTS credits​
 // ​
-// b) Kreirati funkciju unutar objekta "displayDetails" koja ispisuje sve detalje o predmetu i pozvati je kako bi se ispisali detalji
+// b) Create a function within the object "displayDetails" that prints all the details about the subject and call it to display the details​
 //  */
 
 // const subject = {
